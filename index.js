@@ -8,13 +8,13 @@ const app = express();
 const baseDirectory = path.join(__dirname,'/dist');
 app.use((req, res,next)=>{
     console.log(req.url);
-    if(req.url === '/style.css'){
-        execSync(`cd ${__dirname} && npm run build:css`, { stdio: 'inherit' });
-    }
+    // if(req.url === '/style.css'){
+    //     execSync(`cd ${__dirname} && npm run build:css`, { stdio: 'inherit' });
+    // }
     next()
 
 })
-// app.get('/',())
+
 app.use('/',express.static(baseDirectory))
 
 const PORT = 3003;
