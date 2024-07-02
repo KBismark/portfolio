@@ -147,7 +147,7 @@ a.styled-button{
 
 @media screen and (max-width: 950px) {
     .hero{
-        flex-wrap: wrap;
+        flex-wrap: wrap-reverse;
     }
     .hero-text-container{
         margin-left: 0px;
