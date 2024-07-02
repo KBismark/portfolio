@@ -149,9 +149,17 @@ a.styled-button{
     .hero{
         flex-wrap: wrap-reverse;
     }
+    .hero h1{
+        font-size: 45px;
+    }
+    
+    .hero-text-container p{
+        font-size: 30px;
+    }
     .hero-text-container{
         margin-left: 0px;
     }
+    
     .hero-img-container{
         margin-bottom: 0px;
     }
