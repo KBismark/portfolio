@@ -150,11 +150,11 @@ a.styled-button{
         flex-wrap: wrap-reverse;
     }
     .hero h1{
-        font-size: 45px;
+        font-size: 35px;
     }
     
     .hero-text-container p{
-        font-size: 30px;
+        font-size: 25px;
     }
     .hero-text-container{
         margin-left: 0px;
