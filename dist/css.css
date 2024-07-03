@@ -130,11 +130,12 @@ a.styled-button{
 }
 .styled-button{
     border-radius: 30px;
-    padding: 8px 15px;
+    padding: 10px 20px;
     display: flex;
     align-items: center;
     justify-content: center;
     border: none;
+    background-color: #000000;
 }
 .styled-button span{
     display: flex;
