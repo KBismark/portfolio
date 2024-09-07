@@ -25,10 +25,258 @@
             </p>
         </div>
     </div>
+    <section class="content-bg">
+        <div style="margin-top: 2%;display: flex;justify-content: center;">
+            <p class="message" style="max-width: 800px;padding: 0px 15px;text-align: justify;">
+                A results-driven developer with a deep passion for problem-solving and a keen ability to strategize and create tools 
+                that address critical challenges. 
+                <br/><br/>
+                Strong foundation in JavaScript/TypeScript, HTML and CSS with experience in creating 
+                web and mobile applications using React Native/React, Nodejs(Express) and MongoDB.
+            </p>
+        </div>
+    </section>
+    <style>
+        q::before{
+            display: inline-block;
+            transform: rotate(0deg) scale(8);
+        }
+
+        q::after {
+            /* animation: dancing 1s linear infinite; */
+            display: none;
+            transform: rotate(13deg) scale(4);
+            ;
+        }
+        q {
+            quotes: "“" ;
+        }
+
+    </style>
+    <style>
+        p.message{
+            font-size: 24px;
+        }
+        article{
+            width: 500px;
+            border: 1px solid #eee;
+            border-radius: 20px;
+            padding: 10px;
+            box-shadow: 0px 0px 2px 2px #afa2a242;
+            cursor: pointer;
+            transition-property: all;
+            transition-duration: .3s;
+            transition-timing-function: ease;
+            margin: 15px;
+            background-color: #ebebeb;
+        }
+        article:hover{
+            box-shadow: 0px 6px 8px 5px #afa2a242;
+        }
+        article .image-container{
+            width: 100%;
+            overflow: hidden;
+            max-height: 220px;
+            background-color: #ececec;
+        }
+        article img{
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 10px;
+        }
+        
+        article h3{
+            margin: 0px;display: inline;font-size: 18px;
+        }
+        article p{
+            text-align: justify;
+        }
+        article .description{
+            padding: 0px 10px 15px;
+            text-align: justify;
+            margin: 0px;
+        }
+        article .tools{
+            display: flex;
+            align-items: center;
+            padding: 15px 0px;
+            flex-flow: wrap;
+            justify-content: flex-start;
+        }
+        article .tools .item{
+            border-radius: 6px;
+            padding: 5px 10px;
+            font-size: 13px;
+            text-align: center;
+            margin: 0px 5px;
+            margin-bottom: 5px;
+        }
+        .tools .item.js{
+            background-color: #bda3142d;
+            color: #a8910c;
+        }
+        .tools .item.mongo{
+            background-color: #13934f17;
+            color: #13934ff8;
+        }
+        .tools .item.react{
+            background-color: #13938817;
+            color: #0d867cf6;
+        }
+        .tools .item.ts{
+            background-color: #13599317;
+            color: #0d528afa;
+        }
+        .tools .item.css{
+            background-color: #93139317;
+            color: #630a4fea;
+        }
+        .tools .item.ex{
+            background-color: #93132817;
+            color: #931328fa;
+        }
+        .tools .item.html{
+            background-color: #93311317;
+            color: #ad230a;
+        }
+
+        @media screen and (max-width: 510px) {
+            article{
+                width: 100%;
+                cursor: none;
+                margin: 15px 0px;
+                box-shadow: none;
+            }
+            article:hover{
+                box-shadow: none;
+            }
+            p.message{
+                font-size: 20px;
+            }
+
+        }
+    </style>
+    <section style="display: flex;flex-direction: column;align-items: center;">
+        <h2 style="text-align: center;margin-top: 3%;font-size: 3.3rem;">Projects</h2>
+        <div style="width: 100%;margin: auto;display: flex;flex-flow: wrap;justify-content: space-around;max-width: 1080px;">
+            <article>
+                <div class="image-container"><img src="./dist/images/xolus.png" alt=""/></div>
+                <div class="tools" style="justify-content: flex-start;">
+                    <div class="item js">JavaScript</div>
+                    <div class="item ts">TypeScript</div>
+                    <div class="item js">Nodejs</div>
+                </div>
+                <h3 style="display: none;">Xolus </h3>
+                <p class="description">
+                    <strong>Xolus </strong> is an ongoing project aimed at developing a framework for creating 
+                    web applications as a solo developer or small team. This project aims at creating applications interactable 
+                    at first sight without waiting on any hydration techniques and
+                    creating simple HTML and JavaScript applications without the complexity of "known" frameworks.
+                    <br/><br/>
+                    At it core, it serves more as a JSX templating tool for generating HTML on the server to be 
+                    served to the browser. It also includes ways to pre-generate HTML files to be stored and served as static files. It comes with 
+                    a developer-friendly environment for compiling the JSX code to JavaScript code runnable on the server.
+                </p>
+            </article>
+
+            <article>
+                <div class="image-container"><img src="./dist/images/tipster.png" alt=""/></div>
+                <div class="tools" style="justify-content: flex-start;">
+                    <div class="item react">Xolus</div>
+                    <div class="item js">JavaScript</div>
+                    <div class="item css">CSS</div>
+                    <div class="item js">Nodejs</div>
+                    <div class="item ex">Expressjs</div>
+                    <div class="item html">HTML</div>
+                </div>
+                <h3 style="display: none;">InvisibleTipster.com </h3>
+                <p class="description">
+                    <strong>InvisibleTipster.com </strong> is a sports analysis site where match predictions and tips are shared to sports enthusiasts. 
+                    <br/><br/>
+                    As the creator of this wonderful site for my client, I found it much enjoying as I built this website using two of my own inventions. For 
+                    such a simple site, I chose to develop with <strong>Xolus</strong> framework and <strong>statestorejs</strong>. With Nodejs and Expressjs for handling the backend logics, 
+                    the website is currently in production serving its users at <i style="font-weight: normal;">invisibletipster.com</i>.
+                    <br/><br/>
+
+                </p>
+            </article>
+
+            <article>
+                <div class="image-container"><img src="./dist/images/statestore.png" alt=""/></div>
+                <div class="tools">
+                    <div class="item js">JavaScript</div>
+                    <div class="item ts">TypeScript</div>
+                </div>
+                <h3 style="display: none;">Statestore.js </h3>
+                <p class="description">
+                   <strong>Statestore.js </strong> is a simple state management library which allows for reactivity and selectivity in updating 
+                   parts of applications based on changes in the store of states. It is simple, yet powerful in managing states and ensuring 
+                   minimal re-renders when used with <strong>Reactjs</strong>. 
+                   <br/><br/>
+                   Statestore.js can be used in all JavaScript applications and applictions built with TypeScript.
+                </p>
+            </article>
+
+            <article>
+                <div class="image-container"><img src="./dist/images/xyntax.png" alt=""/></div>
+                <div class="tools">
+                    <div class="item js">JavaScript</div>
+                    <div class="item ts">TypeScript</div>
+                    <div class="item js">Nodejs</div>
+                </div>
+                <h3 style="display: none;">Xyntax </h3>
+                <p class="description">
+                    <strong>Xyntax</strong> is a JavaScript syntax highlighting library which dynamically parses code during development, generating pre-highlighted texts and ensuring zero 
+                    performance issues for your documentation sites. 
+                    <br/><br/>
+                    Xyntax can be used both during development for pre-highlighting texts or can be used in any <strong>Nodejs</strong> 
+                    application to highlight code texts. Xyntax can also be used in React applications for pre-highlighting texts during compile time.
+                </p>
+            </article>
+
+            <article>
+                <div class="image-container"><img src="" alt=""/></div>
+                <div class="tools">
+                    <div class="item react">Reactjs</div>
+                    <div class="item js">JavaScript</div>
+                    <div class="item ts">TypeScript</div>
+                    <div class="item css">CSS</div>
+                    <div class="item js">Nodejs</div>
+                    <div class="item ex">Expressjs</div>
+                    <div class="item mongo">Mongodb</div>
+                    <div class="item html">HTML</div>
+                </div>
+                <p class="description">
+                    As an experienced web developer, I specialize in translating your ideas into captivating online experiences. 
+                    As an experienced web developer, I specialize in translating your ideas into captivating online experiences.
+                </p>
+            </article>
+
+            <article>
+                <div class="image-container" style="background-color: #f8f8f8;border: 1px solid #eee;"><img src="./dist/images/amazingdhoes.png" alt=""/></div>
+                <div class="tools">
+                    <div class="item react">Reactjs</div>
+                    <div class="item js">JavaScript</div>
+                    <div class="item ts">TypeScript</div>
+                    <div class="item css">CSS</div>
+                    <div class="item js">Nodejs</div>
+                    <div class="item ex">Expressjs</div>
+                    <div class="item mongo">Mongodb</div>
+                    <div class="item html">HTML</div>
+                </div>
+                <p class="description">
+                    As an experienced web developer, I specialize in translating your ideas into captivating online experiences. 
+                    As an experienced web developer, I specialize in translating your ideas into captivating online experiences.
+                </p>
+            </article>
+
+        </div>
+    </section>
 
     <section >
         <div style="margin-left: 8%;margin-top: 5%;margin-right: 3%;">
-            <h1 style="margin-bottom: 15px;">Web development</h1>
+            <h2 style="margin-bottom: 15px;">Web development</h2>
             <p style="max-width: 500px;">
                 As an experienced web developer, I specialize in translating your ideas into captivating online experiences. 
             </p>
@@ -101,6 +349,41 @@
 
         </div>
     </section>
+    <footer>
+        <ul class="link-list">
+            <li>
+                <a href="#">
+                    <svg  xmlns="http://www.w3.org/2000/svg"  width="48"  height="48"  viewBox="0 0 24 24"  fill="none"  stroke="#ffffff"  stroke-width="1.5"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-facebook"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3" /></svg>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <svg  xmlns="http://www.w3.org/2000/svg"  width="48"  height="48"  viewBox="0 0 24 24"  fill="none"  stroke="#ffffff"  stroke-width="1.5"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-instagram"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 4m0 4a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z" /><path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" /><path d="M16.5 7.5l0 .01" /></svg>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <svg  xmlns="http://www.w3.org/2000/svg"  width="48"  height="48"  viewBox="0 0 24 24"  fill="none"  stroke="#ffffff"  stroke-width="1.5"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-x"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 4l11.733 16h4.267l-11.733 -16z" /><path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772" /></svg>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <svg  xmlns="http://www.w3.org/2000/svg"  width="48"  height="48"  viewBox="0 0 24 24"  fill="none"  stroke="#ffffff"  stroke-width="1.5"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-youtube"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M2 8a4 4 0 0 1 4 -4h12a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-12a4 4 0 0 1 -4 -4v-8z" /><path d="M10 9l5 3l-5 3z" /></svg>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <svg  xmlns="http://www.w3.org/2000/svg"  width="48"  height="48"  viewBox="0 0 24 24"  fill="none"  stroke="#ffffff"  stroke-width="1.5"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-tiktok"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M21 7.917v4.034a9.948 9.948 0 0 1 -5 -1.951v4.5a6.5 6.5 0 1 1 -8 -6.326v4.326a2.5 2.5 0 1 0 4 2v-11.5h4.083a6.005 6.005 0 0 0 4.917 4.917z" /></svg>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <svg  xmlns="http://www.w3.org/2000/svg"  width="48"  height="48"  viewBox="0 0 24 24"  fill="none"  stroke="#ffffff"  stroke-width="1.5"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-linkedin"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z" /><path d="M8 11l0 5" /><path d="M8 8l0 .01" /><path d="M12 16l0 -5" /><path d="M16 16v-3a2 2 0 0 0 -4 0" /></svg>
+                </a>
+            </li>
+        </ul>
+    </footer>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Hedvig+Letters+Serif:opsz@12..24&display=swap" rel="stylesheet">
 </body>
 </html>

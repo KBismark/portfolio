@@ -5,15 +5,15 @@ const path = require('path');
 const fs = require('fs');
 const app = express();
 
-const baseDirectory = path.join(__dirname,'/dist');
-app.use((req, res,next)=>{
-    console.log(req.url);
-    // if(req.url === '/style.css'){
-    //     execSync(`cd ${__dirname} && npm run build:css`, { stdio: 'inherit' });
-    // }
-    next()
+const baseDirectory = path.join(__dirname);
+// app.use((req, res,next)=>{
+//     console.log(req.url);
+//     if(req.url === '/'){
+//        return res.status(200).send(fs.readFileSync(path.join(__dirname, '/index.html'), 'utf8'))
+//     }
+//     next()
 
-})
+// })
 
 app.use('/',express.static(baseDirectory))
 
