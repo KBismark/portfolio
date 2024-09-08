@@ -68,7 +68,7 @@
             transition-duration: .3s;
             transition-timing-function: ease;
             margin: 15px;
-            background-color: #ebebeb;
+            background-color: #ebebeb6c;
         }
         article:hover{
             box-shadow: 0px 6px 8px 5px #afa2a242;
@@ -76,7 +76,7 @@
         article .image-container{
             width: 100%;
             overflow: hidden;
-            max-height: 220px;
+            max-height: 250px;
             background-color: #ececec;
         }
         article img{
@@ -84,6 +84,12 @@
             height: auto;
             display: block;
             border-radius: 10px;
+        }
+        article video{
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 5px;
         }
         
         article h3{
@@ -145,8 +151,9 @@
             article{
                 width: 100%;
                 cursor: none;
-                margin: 15px 0px;
+                margin: 5px 0px;
                 box-shadow: none;
+                border-radius: 0px;
             }
             article:hover{
                 box-shadow: none;
@@ -160,128 +167,169 @@
     <section style="display: flex;flex-direction: column;align-items: center;">
         <h2 style="text-align: center;margin-top: 3%;font-size: 3.3rem;">Projects</h2>
         <div style="width: 100%;margin: auto;display: flex;flex-flow: wrap;justify-content: space-around;max-width: 1080px;">
+
             <article>
-                <div class="image-container"><img src="./dist/images/xolus.png" alt=""/></div>
-                <div class="tools" style="justify-content: flex-start;">
-                    <div class="item js">JavaScript</div>
-                    <div class="item ts">TypeScript</div>
-                    <div class="item js">Nodejs</div>
+                <div class="image-container">
+                    <video src="./dist/videos/spyweb.webm" controls ></video>
                 </div>
-                <h3 style="display: none;">Xolus </h3>
-                <p class="description">
-                    <strong>Xolus </strong> is an ongoing project aimed at developing a framework for creating 
-                    web applications as a solo developer or small team. This project aims at creating applications interactable 
-                    at first sight without waiting on any hydration techniques and
-                    creating simple HTML and JavaScript applications without the complexity of "known" frameworks.
-                    <br/><br/>
-                    At it core, it serves more as a JSX templating tool for generating HTML on the server to be 
-                    served to the browser. It also includes ways to pre-generate HTML files to be stored and served as static files. It comes with 
-                    a developer-friendly environment for compiling the JSX code to JavaScript code runnable on the server.
-                </p>
-            </article>
-
-            <article>
-                <div class="image-container"><img src="./dist/images/tipster.png" alt=""/></div>
-                <div class="tools" style="justify-content: flex-start;">
-                    <div class="item react">Xolus</div>
-                    <div class="item js">JavaScript</div>
-                    <div class="item css">CSS</div>
-                    <div class="item js">Nodejs</div>
-                    <div class="item ex">Expressjs</div>
-                    <div class="item html">HTML</div>
-                </div>
-                <h3 style="display: none;">InvisibleTipster.com </h3>
-                <p class="description">
-                    <strong>InvisibleTipster.com </strong> is a sports analysis site where match predictions and tips are shared to sports enthusiasts. 
-                    <br/><br/>
-                    As the creator of this wonderful site for my client, I found it much enjoying as I built this website using two of my own inventions. For 
-                    such a simple site, I chose to develop with <strong>Xolus</strong> framework and <strong>statestorejs</strong>. With Nodejs and Expressjs for handling the backend logics, 
-                    the website is currently in production serving its users at <i style="font-weight: normal;">invisibletipster.com</i>.
-                    <br/><br/>
-
-                </p>
-            </article>
-
-            <article>
-                <div class="image-container"><img src="./dist/images/statestore.png" alt=""/></div>
-                <div class="tools">
-                    <div class="item js">JavaScript</div>
-                    <div class="item ts">TypeScript</div>
-                </div>
-                <h3 style="display: none;">Statestore.js </h3>
-                <p class="description">
-                   <strong>Statestore.js </strong> is a simple state management library which allows for reactivity and selectivity in updating 
-                   parts of applications based on changes in the store of states. It is simple, yet powerful in managing states and ensuring 
-                   minimal re-renders when used with <strong>Reactjs</strong>. 
-                   <br/><br/>
-                   Statestore.js can be used in all JavaScript applications and applictions built with TypeScript.
-                </p>
-            </article>
-
-            <article>
-                <div class="image-container"><img src="./dist/images/xyntax.png" alt=""/></div>
-                <div class="tools">
-                    <div class="item js">JavaScript</div>
-                    <div class="item ts">TypeScript</div>
-                    <div class="item js">Nodejs</div>
-                </div>
-                <h3 style="display: none;">Xyntax </h3>
-                <p class="description">
-                    <strong>Xyntax</strong> is a JavaScript syntax highlighting library which dynamically parses code during development, generating pre-highlighted texts and ensuring zero 
-                    performance issues for your documentation sites. 
-                    <br/><br/>
-                    Xyntax can be used both during development for pre-highlighting texts or can be used in any <strong>Nodejs</strong> 
-                    application to highlight code texts. Xyntax can also be used in React applications for pre-highlighting texts during compile time.
-                </p>
-            </article>
-
-            <article>
-                <div class="image-container"><img src="" alt=""/></div>
                 <div class="tools">
                     <div class="item react">Reactjs</div>
-                    <div class="item js">JavaScript</div>
                     <div class="item ts">TypeScript</div>
-                    <div class="item css">CSS</div>
                     <div class="item js">Nodejs</div>
                     <div class="item ex">Expressjs</div>
                     <div class="item mongo">Mongodb</div>
-                    <div class="item html">HTML</div>
                 </div>
                 <p class="description">
-                    As an experienced web developer, I specialize in translating your ideas into captivating online experiences. 
-                    As an experienced web developer, I specialize in translating your ideas into captivating online experiences.
+                    <strong>Spyweb </strong> is a full stack chat application that supports sending and receiving of messages, images and 
+                    other file types to and from users. Spyweb was created using Reactjs as the frontend library, 
+                    Nodejs and Expressjs as the backend framework, and Mongodb as the database for storing data. 
+                    <br/>  <br/>
+                    Notable features implemented include user authentication and message encryption to ensure security in the application. 
+                    Other features (ongoing) are the ability to make voice and video call, record and send voice notes, and the 
+                    ability for users to watch videos or movies together with real time synchronization while they chat. 
+                    
                 </p>
             </article>
 
             <article>
-                <div class="image-container" style="background-color: #f8f8f8;border: 1px solid #eee;"><img src="./dist/images/amazingdhoes.png" alt=""/></div>
-                <div class="tools">
-                    <div class="item react">Reactjs</div>
-                    <div class="item js">JavaScript</div>
-                    <div class="item ts">TypeScript</div>
-                    <div class="item css">CSS</div>
-                    <div class="item js">Nodejs</div>
-                    <div class="item ex">Expressjs</div>
-                    <div class="item mongo">Mongodb</div>
-                    <div class="item html">HTML</div>
-                </div>
-                <p class="description">
-                    As an experienced web developer, I specialize in translating your ideas into captivating online experiences. 
-                    As an experienced web developer, I specialize in translating your ideas into captivating online experiences.
-                </p>
+                <div class="image-container"><img src="./dist/images/amazingdhoes.png" alt=""/></div>
+                <a style="text-decoration: none;color: inherit;" href="https://fileserver-8tgg.onrender.com/">
+                    <div class="tools">
+                        <div class="item react">Reactjs</div>
+                        <div class="item ts">TypeScript</div>
+                        <div class="item js">Nodejs</div>
+                        <div class="item ex">Expressjs</div>
+                        <div class="item mongo">Mongodb</div>
+                    </div>
+                    <p class="description">
+                        <strong>File Server </strong> is a simple document sharing platform where files can be easily accessed and downloaded remotely by users. 
+                        It's an application which allows the admin to upload files that can be accessed by users online. File server is a fully functioning  
+                        application developed with the <strong>M</strong>ongodb, <strong>E</strong>xpressjs, <strong>R</strong>eact, and <strong>N</strong>odejs 
+                        (MERN) stack.
+                        <br/>  <br/>
+                        Notable features implemented in this application include user authentication, file sharing via email, file uploads by admin, and file downloads 
+                        by users. 
+                        <br/><br/>
+                        <span style="text-decoration: underline;font-style: italic;"> Click here </span> to view.
+                    </p>
+                </a>
             </article>
 
+            <article>
+                <a style="text-decoration: none;color: inherit;" href="/">
+                    <div class="image-container"><img src="./dist/images/xolus.png" alt=""/></div>
+                    <div class="tools" style="justify-content: flex-start;">
+                        <div class="item js">JavaScript</div>
+                        <div class="item ts">TypeScript</div>
+                        <div class="item js">Nodejs</div>
+                    </div>
+                    <h3 style="display: none;">Xolus </h3>
+                    <p class="description">
+                        <strong>Xolus </strong> is an ongoing project aimed at developing a framework for creating 
+                        web applications as a solo developer or small team. This project aims at creating applications interactable 
+                        at first sight without waiting on any hydration techniques and to simpify the development 
+                        of HTML and JavaScript applications by taking out the complexity of "known" frameworks.
+                        <br/><br/>
+                        Mainly, it serves more as a JSX templating tool for generating HTML on the server to be 
+                        served to the browser. It also includes ways to pre-generate HTML files to be stored and served as static files. It comes with 
+                        a developer-friendly environment for compiling the JSX code to JavaScript code runnable on the server.
+                    </p>
+                </a>
+            </article>
+
+            <article>
+                <a style="text-decoration: none;color: inherit;" href="/">
+                    <div class="image-container"><img src="./dist/images/tipster.png" alt=""/></div>
+                    <div class="tools" style="justify-content: flex-start;">
+                        <div class="item react">Xolus</div>
+                        <div class="item js">JavaScript</div>
+                        <div class="item css">CSS</div>
+                        <div class="item js">Nodejs</div>
+                        <div class="item ex">Expressjs</div>
+                        <div class="item html">HTML</div>
+                    </div>
+                    <h3 style="display: none;">InvisibleTipster.com </h3>
+                    <p class="description">
+                        <strong>InvisibleTipster.com </strong> is a sports analysis site where match predictions and tips are shared to sports enthusiasts. 
+                        <br/><br/>
+                        As the creator of this wonderful site for my client, I found it much fulfilling as I built this website using two of my own inventions. For 
+                        such a simple site, I chose to develop with <strong>Xolus</strong> framework and <strong>statestorejs</strong>. With Nodejs and Expressjs for handling the backend logics, 
+                        the website is currently in production serving its users at <i style="font-weight: normal;">invisibletipster.com</i>.
+                        <br/><br/>
+                        <span style="text-decoration: underline;font-style: italic;"> Click here </span> to view.
+
+                    </p>
+                </a>
+            </article>
+
+            <article>
+                <a style="text-decoration: none;color: inherit;" href="/">
+                    <div class="image-container"><img src="./dist/images/statestore.png" alt=""/></div>
+                    <div class="tools">
+                        <div class="item js">JavaScript</div>
+                        <div class="item ts">TypeScript</div>
+                    </div>
+                    <h3 style="display: none;">Statestore.js </h3>
+                    <p class="description">
+                    <strong>Statestore.js </strong> is a simple state management library which allows for reactivity and selectivity in updating 
+                    parts of applications based on changes in the store of states. It is simple, yet powerful in managing states and ensuring 
+                    minimal re-renders when used with <strong>Reactjs</strong>. 
+                    <br/><br/>
+                    Statestore.js can be used in all JavaScript applications and applictions built with TypeScript.
+                    </p>
+                </a>
+            </article>
+
+            <article>
+                <a style="text-decoration: none;color: inherit;" href="/">
+                    <div class="image-container"><img src="./dist/images/xyntax.png" alt=""/></div>
+                    <div class="tools">
+                        <div class="item js">JavaScript</div>
+                        <div class="item ts">TypeScript</div>
+                        <div class="item js">Nodejs</div>
+                    </div>
+                    <h3 style="display: none;">Xyntax </h3>
+                    <p class="description">
+                        <strong>Xyntax</strong> is a JavaScript syntax highlighting library which dynamically parses code during development, generating pre-highlighted texts and ensuring zero 
+                        performance issues for your documentation sites. 
+                        <br/><br/>
+                        Xyntax can be used both during development for pre-highlighting texts or can be used in any <strong>Nodejs</strong> 
+                        application to highlight code texts. Xyntax can also be used in React applications for pre-highlighting texts during compile time.
+                    </p>
+                </a>
+            </article>
         </div>
     </section>
 
     <section >
-        <div style="margin-left: 8%;margin-top: 5%;margin-right: 3%;">
-            <h2 style="margin-bottom: 15px;">Web development</h2>
-            <p style="max-width: 500px;">
+        <div style="margin-top: 5%;padding: 0px 15px;display: flex;flex-direction: column;align-items: center;">
+            <h3 style="margin-bottom: 15px;font-size: 125%;">Web development</h3>
+            <p style="max-width: 500px;text-align: center;margin: 0px;">
                 As an experienced web developer, I specialize in translating your ideas into captivating online experiences. 
             </p>
         </div>
         <div style='display:flex;flex-direction: column;align-items: center;'>
+            <div class="large-showcase" style="margin-bottom: 2%;">
+                <div class="automobile" style="margin-top: 12%;">
+                    <img src="./dist/images/amazingdhoes.png" />
+                </div>
+                <div style="display: flex; justify-content: center;flex-flow: wrap;max-width: 1200px;padding: 0px 3%;margin-top: 5%;">
+                    
+                    <div class="fade-in-at-moibile" style="display:flex;flex-direction: column;align-items: center;">
+                        <h4 style="text-align: center; text-transform: capitalize;">An E-commerce App Built With React </h4>
+                        <a href="https://amazingshoes-elite.netlify.app/" class="styled-button" style="background-color: #000000;" >
+                            <span style="color: #fff;">View this e-commerce app</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-narrow-right" width="26" height="26" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                <path d="M5 12l14 0" />
+                                <path d="M15 16l4 -4" />
+                                <path d="M15 8l4 4" />
+                            </svg>
+                        </a>
+                    </div>
+                    <div></div>
+                </div>
+            </div>
             <div class="large-showcase" style="margin-bottom: 8%;" >
                 <div class="automobile" style="margin-top: -5%;">
                     <img src="./dist/images/automobile2.png"  />
@@ -289,7 +337,7 @@
                 <div style="display: flex; justify-content: space-between;flex-flow: wrap;max-width: 1200px;padding: 0px 3%;">
                     <div></div>
                     <div class="fade-in-at-moibile" style="display:flex;flex-direction: column;align-items: center;">
-                        <h3 style="text-align: center;text-transform: capitalize;">Landing Page for a Luxurous Automobile Company</h3>
+                        <h4 style="text-align: center;text-transform: capitalize;">Landing Page for a Luxurious Automobile Company</h4>
                         <a href="https://luxuryautomobile.netlify.app/" class="styled-button" style="background-color: #000000;" >
                             <span style="color: #fff;">Visit automobile landing page</span>
                             <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-narrow-right" width="26" height="26" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -310,7 +358,7 @@
                 <div style="display: flex; justify-content: center;flex-flow: wrap;max-width: 1200px;padding: 0px 3%;margin-top: 5%;">
                     
                     <div class="fade-in-at-moibile" style="display:flex;flex-direction: column;align-items: center;">
-                        <h3 style="text-align: center;text-transform: capitalize;">A Simple Online Shop for my dear Sister, Janet Gently</h3>
+                        <h4 style="text-align: center;text-transform: capitalize;">A Simple Online Shop for Janet Gently</h4>
                         <a href="https://www.janetgently.kbis.works/" class="styled-button" style="background-color: #000000;" >
                             <span style="color: #fff;">Pre-order items from Janet Gently</span>
                             <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-narrow-right" width="26" height="26" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -325,27 +373,7 @@
                 </div>
             </div>
 
-            <div class="large-showcase" style="margin-bottom: 8%;">
-                <div class="automobile" style="margin-top: 0px;">
-                    <img src="./dist/images/amazingdhoes.png" />
-                </div>
-                <div style="display: flex; justify-content: space-between;flex-flow: wrap;max-width: 1200px;padding: 0px 3%;margin-top: 5%;">
-                    
-                    <div class="fade-in-at-moibile" style="display:flex;flex-direction: column;align-items: center;">
-                        <h3 style="text-align: center; text-transform: capitalize;">An E-commerce App Built With React </h3>
-                        <a href="https://amazingshoes-elite.netlify.app/" class="styled-button" style="background-color: #000000;" >
-                            <span style="color: #fff;">View this e-commerce app</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-narrow-right" width="26" height="26" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                                <path d="M5 12l14 0" />
-                                <path d="M15 16l4 -4" />
-                                <path d="M15 8l4 4" />
-                            </svg>
-                        </a>
-                    </div>
-                    <div></div>
-                </div>
-            </div>
+            
 
         </div>
     </section>
