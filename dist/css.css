@@ -21,10 +21,6 @@ body{
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
-    /* background-image: url('data:image/svg+xml,<svg viewBox="0 0 2487 2000" width="2487" height="2000" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"><defs><filter id="blur1" x="-10%" y="-10%" width="120%" height="120%"><feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood><feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"></feBlend><feGaussianBlur stdDeviation="474" result="effect1_foregroundBlur"></feGaussianBlur></filter></defs><rect width="2487" height="2000" fill="%23ffffff"></rect><g filter="url(%23blur1)"><circle cx="1311" cy="446" fill="%23d8d8d8" r="1053"></circle><circle cx="270" cy="115" fill="%23ffffff" r="1053"></circle><circle cx="1711" cy="1467" fill="%23d8d8d8" r="1053"></circle><circle cx="1075" cy="1904" fill="%23d8d8d8" r="1053"></circle><circle cx="2023" cy="699" fill="%23ffffff" r="1053"></circle><circle cx="2218" cy="1679" fill="%23d8d8d8" r="1053"></circle></g></svg>');
-    background-size: auto 100%;
-    background-repeat: no-repeat;
-    background-position: left top; */
 }
 .font-family {
     font-family: "Raleway", sans-serif;
@@ -43,10 +39,6 @@ body{
     background-image: url(./images/banner.png);
     background-size: cover;
     background-position: center;
-}
-
-.content-bg{
-	background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="-300 0 950 270" ><path d="M-314,267 C105,364 400,100 812,279" fill="green" stroke="red" stroke-width="120" stroke-linecap="round"/>');
 }
 
 .hero-img-container{
