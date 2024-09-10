@@ -135,7 +135,7 @@ a.styled-button{
 }
 .styled-button{
     border-radius: 30px;
-    padding: 10px 20px;
+    padding: 10px 20px 10px 30px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -153,9 +153,9 @@ a.styled-button{
 
 
 footer{
-    padding: 20px auto;
+    padding: 20px 15px;
     background-color: #000000;
-    height: 400px;
+    /* height: 400px; */
 }
 
 @media screen and (max-width: 950px) {
