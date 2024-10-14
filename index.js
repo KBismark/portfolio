@@ -13,11 +13,11 @@ const baseDirectory = path.join(__dirname);
 //     }
 //     next()
 
-// })
+// })  design-o1tk.onrender.com
 
 app.use('/',express.static(baseDirectory))
 
-const PORT = 3003;
+const PORT = 80;
 app.listen(PORT,()=>{
     console.log('Serving on port '+PORT);
 })
