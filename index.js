@@ -1,8 +1,8 @@
 
-const {execSync} = require('child_process');
+// const {execSync} = require('child_process');
 const express = require('express');
 const path = require('path');
-const fs = require('fs');
+// const fs = require('fs');
 const app = express();
 
 const baseDirectory = path.join(__dirname);
@@ -18,6 +18,18 @@ const baseDirectory = path.join(__dirname);
 app.use('/',express.static(baseDirectory))
 
 const PORT = 80;
-app.listen(PORT,()=>{
+app.listen(()=>{
     console.log('Serving on port '+PORT);
 })
+
+
+// var http = require('http');
+// var server = http.createServer(function(req, res) {
+//     res.writeHead(200, {'Content-Type': 'text/plain'});
+//     var message = 'It works!\n',
+//         version = 'NodeJS ' + process.versions.node + '\n',
+//         response = [message, version].join('\n');
+//     res.end(response);
+// });
+// server.listen();
+
