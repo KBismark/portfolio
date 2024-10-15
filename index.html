@@ -178,6 +178,83 @@
 
         }
     </style>
+    
+    <style>
+        .flow-container {
+            display: flex;
+            /* flex-direction: column; */
+            align-items: center;
+            position: relative;
+        }
+        .stage {
+            display: flex;
+            align-items: center;
+            margin: 20px 0;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.5s ease;
+        }
+        .icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: #4ecdc4;
+            /* #4a90e2; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 20px;
+            color: white;
+            font-size: 24px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .content {
+            background-color: white;
+            padding: 15px 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .content h3 {
+            margin: 0 0 5px 0;
+        }
+        .content p {
+            margin: 0;
+            font-size: 15px;
+            color: #333;
+        }
+        #svgContainer {
+            position: absolute;
+            top: 0;
+            left: 30px;
+            height: 100%;
+            z-index: -1;
+        }
+        .stage.current .icon {
+            background-color: #e74c3c;
+            animation: pulse 2s infinite;
+        }
+        .stage .content {
+            border-left: 4px solid #4ecdc4;
+        }
+        .stage.current .content {
+            border-left: 4px solid #e74c3c;
+        }
+        .date-time{
+            color: #666;font-size: 14px;margin-top: 15px;
+        }
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(231, 76, 60, 0.4);
+            }
+            70% {
+                box-shadow: 0 0 0 20px rgba(231, 76, 60, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(231, 76, 60, 0);
+            }
+        }
+    </style>
+
     <style>
         .font-family {
             font-family: "Hedvig Letters Serif", serif;
@@ -215,83 +292,16 @@
             .hero-image {
                 margin-top: 5rem;
             }
+            .icon{
+                width: 40px;
+                height: 40px;
+            }
+            .content{
+                margin-left: -15px;
+            }
         }
     </style>
-    <style>
-     .flow-container {
-        display: flex;
-        /* flex-direction: column; */
-        align-items: center;
-        position: relative;
-    }
-    .stage {
-        display: flex;
-        align-items: center;
-        margin: 20px 0;
-        opacity: 0;
-        transform: translateY(20px);
-        transition: all 0.5s ease;
-    }
-    .icon {
-        width: 60px;
-        height: 60px;
-        border-radius: 50%;
-        background-color: #4ecdc4;
-        /* #4a90e2; */
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-right: 20px;
-        color: white;
-        font-size: 24px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
-    .content {
-        background-color: white;
-        padding: 15px 25px;
-        border-radius: 8px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
-    .content h3 {
-        margin: 0 0 5px 0;
-    }
-    .content p {
-        margin: 0;
-        font-size: 15px;
-        color: #333;
-    }
-    #svgContainer {
-        position: absolute;
-        top: 0;
-        left: 30px;
-        height: 100%;
-        z-index: -1;
-    }
-    .stage.current .icon {
-        background-color: #e74c3c;
-        animation: pulse 2s infinite;
-    }
-    .stage .content {
-        border-left: 4px solid #4ecdc4;
-    }
-    .stage.current .content {
-        border-left: 4px solid #e74c3c;
-    }
-    .date-time{
-        color: #666;font-size: 14px;margin-top: 15px;
-    }
-    @keyframes pulse {
-        0% {
-            box-shadow: 0 0 0 0 rgba(231, 76, 60, 0.4);
-        }
-        70% {
-            box-shadow: 0 0 0 20px rgba(231, 76, 60, 0);
-        }
-        100% {
-            box-shadow: 0 0 0 0 rgba(231, 76, 60, 0);
-        }
-    }
-</style>
+
 </head>
 <body class="font-family" style="font-weight: 500;font-size: 18px;line-height: 1.6;">
     <div class="container">
