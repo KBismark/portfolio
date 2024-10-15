@@ -1,9 +1,9 @@
 
 // const {execSync} = require('child_process');
-// const express = require('express');
+const express = require('express');
 const path = require('path');
 // const fs = require('fs');
-// const app = express();
+const app = express();
 
 const baseDirectory = path.join(__dirname);
 // app.use((req, res,next)=>{
@@ -15,7 +15,7 @@ const baseDirectory = path.join(__dirname);
 
 // })  design-o1tk.onrender.com
 
-// app.use('/',express.static(baseDirectory))
+app.use('/home',express.static(baseDirectory))
 
 // const PORT = 80;
 // app.listen(()=>{
@@ -24,14 +24,6 @@ const baseDirectory = path.join(__dirname);
 
 
 var http = require('http');
-var server = http.createServer(
-    function(req, res) {
-    res.writeHead(200, {'Content-Type': 'text/plain'});
-    var message = 'It works!\n',
-        version = 'NodeJS ' + process.versions.node + '\nRoot: ',
-        response = [message, version, baseDirectory].join('\n');
-    res.end(response);
-}
-);
+var server = http.createServer(app);
 server.listen();
 

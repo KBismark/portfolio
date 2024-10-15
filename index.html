@@ -8,6 +8,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <style>
+        *{
+            transition-property: all;
+            transition-duration: .3s;
+            transition-timing-function: linear;
+        }
         body, html {
             margin: 0;
             padding: 0;
@@ -28,6 +33,9 @@
             text-decoration: none;
             color: #333;
             font-weight: 600;
+        }
+        nav a:hover{
+            color: #000;
         }
         .hero {
             display: flex;
@@ -85,6 +93,14 @@
             width: 30%;
             min-width: 350px;
         }
+        .service:hover{
+            box-shadow: 0px 13px 24px rgba(194, 194, 194, 0.23);
+        }
+        .service p{
+            font-weight: 14px;
+            padding-right: 15px;
+            padding-left: 15px;
+        }
         .service-icon {
             width: 100px;
             height: 100px;
@@ -139,12 +155,27 @@
             background-color: #333;
             color: white;
             border: none;
-            padding: 10px 20px;
+            padding: 12px 20px;
             cursor: pointer;
+            font-size: 18px;
+            min-width: 280px;
+            text-align: center;
+            font-weight: 600;
+            
+        }
+        button:hover{
+            background-color: #000;
         }
         footer {
             margin-top: 50px;
             text-align: center;
+        }
+        a{
+            color: #333;
+        }
+        a:hover{
+            color: #000;
+
         }
     </style>
     <style>
@@ -186,10 +217,82 @@
             }
         }
     </style>
+    <style>
+     .flow-container {
+        display: flex;
+        /* flex-direction: column; */
+        align-items: center;
+        position: relative;
+    }
+    .stage {
+        display: flex;
+        align-items: center;
+        margin: 20px 0;
+        opacity: 0;
+        transform: translateY(20px);
+        transition: all 0.5s ease;
+    }
+    .icon {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background-color: #4ecdc4;
+        /* #4a90e2; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 20px;
+        color: white;
+        font-size: 24px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .content {
+        background-color: white;
+        padding: 15px 25px;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .content h3 {
+        margin: 0 0 5px 0;
+    }
+    .content p {
+        margin: 0;
+        font-size: 15px;
+        color: #333;
+    }
+    #svgContainer {
+        position: absolute;
+        top: 0;
+        left: 30px;
+        height: 100%;
+        z-index: -1;
+    }
+    .stage.current .icon {
+        background-color: #e74c3c;
+        animation: pulse 2s infinite;
+    }
+    .stage .content {
+        border-left: 4px solid #4ecdc4;
+    }
+    .stage.current .content {
+        border-left: 4px solid #e74c3c;
+    }
+    @keyframes pulse {
+        0% {
+            box-shadow: 0 0 0 0 rgba(231, 76, 60, 0.4);
+        }
+        70% {
+            box-shadow: 0 0 0 20px rgba(231, 76, 60, 0);
+        }
+        100% {
+            box-shadow: 0 0 0 0 rgba(231, 76, 60, 0);
+        }
+    }
+</style>
 </head>
 <body class="font-family" style="font-weight: 500;font-size: 18px;line-height: 1.6;">
     <div class="container">
-        <header>
+        <header style="border-bottom: 1px solid #eee;padding-bottom: 5px;">
             <div style="display: flex;align-items: center;"  class="logo">
                 <img style="display: block;border-radius: 50%;width: 50px;height: 50px;border: 1px solid #eee;" alt="Bismark's photo" src="dist/images/kbismark.png" />
                 <div style="margin-left: 10px;" class="max-500">
@@ -204,7 +307,7 @@
             </nav>
         </header>
 
-        <section class="hero">
+        <section style="margin-bottom: 8.7rem;" class="hero">
             <div class="hero-text">
                 <p>Programming | Problem-solving</p>
                 <h1>Frontend Web Designer</h1>
@@ -213,7 +316,7 @@
                     creating responsive, user-friendly interfaces, implementing modern web technologies
                     and translating complex concepts into intuitive, visually appealing designs.
                 </p>
-                <button>Contact</button>
+                <button style="margin-top: 10px;">Contact</button>
             </div>
             <div class="hero-image">
                 <img style="display: block;border-top-left-radius: 100px;border-bottom-right-radius: 100px;border: 1px solid #eee;" src="dist/images/kbismark.jpg" alt="Frontend Web Designer portrait">
@@ -222,30 +325,96 @@
             </div>
         </section>
 
-        <div style="display: flex;justify-content: center;margin-top: 6.7rem;margin-bottom: 5.1rem;padding-bottom: 20;border-bottom: 1px solid #eee;padding-top: 20;border-top: 1px solid #eee;">
-            <img style="display: block;width: 100%;max-width: 1000px;" src="dist/images/frontend_tech_stack.png" alt="Tech stacks">
+        <div class="flow-container">
+            <svg id="svgContainer" width="30">
+                <path d="M30 0 V 1000" stroke="#eee" stroke-width="2" fill="none" stroke-dasharray="5,5" />
+            </svg>
+           <div style="display: flex;flex-direction: column-reverse;">
+                <div class="stage" data-step="1">
+                    <div class="icon">1</div>
+                    <div class="content">
+                        <h3>Starter</h3>
+                        <p>Beginning of the journey</p>
+                    </div>
+                </div>
+                <div class="stage" data-step="2">
+                    <div class="icon">2</div>
+                    <div class="content">
+                        <h3>Admission</h3>
+                        <p>Entering the program</p>
+                    </div>
+                </div>
+                <div class="stage" data-step="3">
+                    <div class="icon">3</div>
+                    <div class="content">
+                        <h3>Completion</h3>
+                        <p>Finishing the coursework</p>
+                    </div>
+                </div>
+                <div class="stage current" data-step="4">
+                    <div><div class="icon">4</div></div>
+                    <div class="content">
+                        <h3>Backend developer</h3>
+                        <p>
+                            As an obligation to the State, I am currently undertaking my national service with the 
+                            <a href="https://amalitech.org/" target="_blank" rel="noopener noreferrer" style="font-weight: 600;" > 
+                                AmaliTech Ghana
+                            </a> as a 
+                            backend engineer in accordance with the provisions of Act 426 of the laws and constitution of Ghana.
+                        </p>
+                        <div style="color: #666;font-size: 14px;margin-top: 15px;">October, 2024 - Present</div>
+                    </div>
+                </div>
+           </div>
         </div>
+    
+        <script>
+            function animateFlow() {
+                const stages = document.querySelectorAll('.stage');
+                const svgPath = document.querySelector('#svgContainer path');
+                const pathLength = svgPath.getTotalLength();
+    
+                svgPath.style.strokeDasharray = pathLength;
+                svgPath.style.strokeDashoffset = pathLength;
+    
+                stages.forEach((stage, index) => {
+                    setTimeout(() => {
+                        stage.style.opacity = '1';
+                        stage.style.transform = 'translateY(0)';
+    
+                        const progress = (index + 1) / stages.length;
+                        svgPath.style.strokeDashoffset = pathLength - (pathLength * progress);
+                    }, index * 500);
+                });
+            }
+    
+            window.addEventListener('load', animateFlow);
+        </script>
+        <!-- <div style="display: flex;justify-content: center;margin-top: 6.7rem;margin-bottom: 5.1rem;padding-bottom: 20;border-bottom: 1px solid #eee;padding-top: 20;border-top: 1px solid #eee;">
+            <img style="display: block;width: 100%;max-width: 1000px;" src="dist/images/frontend_tech_stack.png" alt="Tech stacks">
+        </div> -->
+        
 
         <section class="services">
-            <div class="service">
+            <div class="service" style="border: 1px solid #eee;cursor: pointer;">
                 <div style="overflow: hidden;display: flex;justify-content: center;">
-                    <img style="width: 100px;height: auto;display: block;border-radius: 50%;" alt="Frontend projects' profile" src="dist/images/frontend_profile-removebg-preview.png" />
+                    <img style="width: 150px;height: auto;display: block;border-radius: 50%;" alt="Frontend projects' profile" src="dist/images/frontend_profile-removebg-preview.png" />
                 </div>
-                <h3>Frontend Design Profile</h3>
-                <p>This is a template Figma file, turned into code using Anima. Learn more at AnimaApp.com</p>
+                <h3>Frontend design profile</h3>
+                <p>A collection of projects built using frontend tech including HTML, CSS and JavaScript</p>
             </div>
-            <div class="service">
+            <div class="service" style="border: 1px solid #eee;cursor: pointer;">
                 <div style="overflow: hidden;display: flex;justify-content: center;">
-                    <img style="width: 100px;height: auto;display: block;border-radius: 50%;" alt="Frontend projects' profile" src="dist/images/mobile_profile-removebg-preview.png" />
+                    <img style="width: 150px;height: auto;display: block;border-radius: 50%;" alt="Frontend projects' profile" src="dist/images/mobile_profile-removebg-preview.png" />
                 </div>
-                <h3>Mobile App Design Profile</h3>
-                <p>This is a template Figma file, turned into code using Anima. Learn more at AnimaApp.com</p>
+                <h3>Mobile app design profile</h3>
+                <p>View a collection of the latest mobile appication projects built using React Native.</p>
             </div>
-            <div class="service">
+            <div class="service" style="border: 1px solid #eee;cursor: pointer;">
                 <div style="overflow: hidden;display: flex;justify-content: center;">
-                    <img style="width: 100px;height: auto;display: block;border-radius: 50%;" alt="Frontend projects' profile" src="dist/images/backend_profile-removebg-preview.png" />
+                    <img style="width: 150px;height: auto;display: block;border-radius: 50%;" alt="Frontend projects' profile" src="dist/images/backend_profile-removebg-preview.png" />
                 </div>
-                <h3>Backend Design Profile</h3>
+                <h3>Backend development profile</h3>
                 <p>This is a template Figma file, turned into code using Anima. Learn more at AnimaApp.com</p>
             </div>
         </section>
