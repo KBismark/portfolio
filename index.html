@@ -146,6 +146,9 @@
         .portfolio-item{
             width: 30%;
             min-width: 350px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 15px 10px;
+            margin-bottom: 20px;
         }
         .portfolio-item img {
             width: 100%;
@@ -489,11 +492,19 @@
                     <p>A collection of projects built using frontend tech including HTML, CSS, JavaScript and React.</p>
                     <a href="/#">See profile</a>
                 </div>
-                <div class="service" style="border: 1px solid #eee;cursor: pointer;">
+                <div class="service" style="border: 1px solid #eee;cursor: pointer;display: none;">
                     <div style="overflow: hidden;display: flex;justify-content: center;">
                         <img style="width: 150px;height: auto;display: block;border-radius: 50%;" alt="Frontend projects' profile" src="dist/images/mobile_profile-removebg-preview.png" />
                     </div>
                     <h3>Mobile app design </h3>
+                    <p>View a collection of the latest mobile appication projects built using React Native.</p>
+                    <a href="/#">See profile</a>
+                </div>
+                <div class="service" style="border: 1px solid #eee;cursor: pointer;">
+                    <div style="overflow: hidden;display: flex;justify-content: center;">
+                        <img style="width: 150px;height: auto;display: block;border-radius: 50%;" alt="Frontend projects' profile" src="dist/images/mobile_profile-removebg-preview.png" />
+                    </div>
+                    <h3>JavaScript/TypeScript </h3>
                     <p>View a collection of the latest mobile appication projects built using React Native.</p>
                     <a href="/#">See profile</a>
                 </div>
@@ -508,7 +519,7 @@
             </div>
         </section>
 
-        <section id="works" class="portfolio">
+        <section id="works" class="portfolio" style="margin-top: 6rem;" >
             <h2>Latest work</h2>
             <div class="portfolio-grid">
                 <div class="portfolio-item">
@@ -544,6 +555,88 @@
             </div>
         </section>
 
+        <section id="works" class="portfolio" style="margin-top: 6rem;" >
+            <h2>NPM Packages (TS/JS)</h2>
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <h3>
+                        
+                        <a href="https://statestorejs.netlify.app/" target="_blank" rel="noopener noreferrer" > 
+                            Statestore.js
+                        </a>
+                    </h3>
+                    <p>
+                        A state management library for reactively and selectively updating parts of applications.
+                        
+                    </p>
+                </div>
+                <div class="portfolio-item">
+                    <h3>
+                        
+                        <a href="https://github.com/KBismark/remove-style#readme" target="_blank" rel="noopener noreferrer" > 
+                            Remove-Style
+                        </a>
+                    </h3>
+                    <p>
+                        Gets rid of all inline style attributes from html tags in an html file or html text.
+                        
+                    </p>
+                </div>
+                <div class="portfolio-item">
+                    <h3>
+                        
+                        <a href="https://github.com/KBismark/xyntax#readme" target="_blank" rel="noopener noreferrer" > 
+                            Xyntax
+                        </a>
+                    </h3>
+                    <p>
+                        JavaScript and JSX syntax highlighting with Regular expressions. 
+                        
+                    </p>
+                </div>
+                <div class="portfolio-item">
+                    <h3>
+                        
+                        <a href="https://github.com/KBismark/xolus#readme" target="_blank" rel="noopener noreferrer" > 
+                            Xolus
+                        </a>
+                    </h3>
+                    <p>
+                        A JSX templating engine and a progressive html rendering framework. 
+                        
+                    </p>
+                </div>
+                <div class="portfolio-item">
+                    <h3>
+                        
+                        <a href="https://github.com/KBismark/react-native-paging-swipper#readme" target="_blank" rel="noopener noreferrer" > 
+                            react-native-paging-swipper
+                        </a>
+                    </h3>
+                    <p>
+                        A react native content pagination and swipping. Think of TikTok scrolling feature and Instagram image 
+                        swipping feature. 
+                        This package is being used privately at the moment and yet to be documented.
+                        
+                    </p>
+                </div>
+                <div class="portfolio-item">
+                    <h3>
+                        
+                        <a href="https://github.com/KBismark/guther#readme" target="_blank" rel="noopener noreferrer" > 
+                            Guther
+                        </a>
+                    </h3>
+                    <p>
+                        A simple JSON file database managemnt system. Stores JSON data as json files and allow concurrent access to same file 
+                        at a time in nodejs applications. 
+                        This package is being used privately at the moment and yet to be documented.
+                        
+                    </p>
+                </div>
+            </div>
+        </section>
+
         <section class="testimonials" style="display: none;" >
             <h2>Testimonial</h2>
             <div class="testimonial-grid">
@@ -574,7 +667,7 @@
             </div>
         </section>
 
-        <section id="contact" class="contact">
+        <section id="contact" class="contact" style="margin-top: 6.2rem;" >
             <h2>Let's work together</h2>
             <p>This is a template Figma file, turned into code using Anima. Learn more at AnimaApp.com</p>
             <form>
