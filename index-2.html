@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KBismark - A software engineer, experienced in creating and designing web applications, websites and developing mobile apps. </title>
+    <link rel="shortcut icon" href="./dist/images/kbismark.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <style>
+        *{
+            transition-property: all;
+            transition-duration: .3s;
+            transition-timing-function: linear;
+        }
+        body, html {
+            margin: 0;
+            padding: 0;
+            /* font-family: Arial, sans-serif; */
+            font-weight: 500;font-size: 16px;line-height: 1.6;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav a {
+            margin-left: 20px;
+            text-decoration: none;
+            color: #333;
+            font-weight: 600;
+        }
+        nav a:hover{
+            color: #000;
+        }
+        .hero {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 50px;
+        }
+        .hero-text h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+        .hero-image {
+            position: relative;
+            width: 300px;
+            height: 300px;
+        }
+        .hero-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .shape {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+        }
+        .shape-1 {
+            top: -25px;
+            right: -25px;
+            background-color: #ff6b6b;
+            border-radius: 0 50% 50% 50%;
+        }
+        .shape-2 {
+            bottom: -25px;
+            left: -25px;
+            background-color: #4ecdc4;
+            border-radius: 50% 50% 50% 0;
+        }
+        .clients {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 50px;
+        }
+        .clients img {
+            height: 30px;
+        }
+        .services {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 50px;
+            flex-flow: wrap;
+        }
+        .service {
+            text-align: center;
+            width: 30%;
+            min-width: 380px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        /* .service:hover{
+            box-shadow: 0px 13px 24px rgba(194, 194, 194, 0.23);
+        } */
+        .service p{
+            font-size: 16px;
+            padding-right: 15px;
+            padding-left: 15px;
+        }
+        .service a{
+            background-color: #333;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            cursor: pointer;
+            font-size: 18px;
+            min-width: 280px;
+            text-align: center;
+            font-weight: 600;
+            text-decoration: none;
+            
+            margin: 5px 15px 15px;
+            display: block;
+            /* width: calc(100% - 30px);  */
+        }
+        .service a:hover{
+            background-color: #000;
+            color: white;
+        }
+        .service-icon {
+            width: 70px;
+            height: 700px;
+            margin: 0 auto;
+            background-color: #f0f0f0;
+            border-radius: 50%;
+            margin-top: 15px;
+        }
+        .portfolio {
+            margin-top: 50px;
+        }
+        .portfolio-grid {
+            display: flex;
+            /* grid-template-columns: repeat(3, 1fr);
+            gap: 20px; */
+            flex-direction: row;
+            flex-flow: wrap;
+            justify-content: space-around;
+        }
+        .portfolio-item{
+            width: 30%;
+            min-width: 350px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 15px 10px;
+            margin-bottom: 20px;
+        }
+        .portfolio-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .testimonials {
+            margin-top: 50px;
+        }
+        .testimonial-grid {
+            /* display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px; */
+            display: flex;
+            justify-content: space-around;
+            /* margin-top: 50px; */
+            flex-flow: wrap;
+        }
+        .testimonial {
+            background-color: #f0f0f0;
+            padding: 20px;
+            border-radius: 10px;
+
+            min-width: 320px;
+        }
+        .contact {
+            margin-top: 50px;
+        }
+        form {
+            display: grid;
+            gap: 10px;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+        }
+        button {
+            background-color: #333;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            cursor: pointer;
+            font-size: 18px;
+            min-width: 280px;
+            text-align: center;
+            font-weight: 600;
+            
+        }
+        button:hover{
+            background-color: #000;
+        }
+        footer {
+            margin-top: 50px;
+            text-align: center;
+        }
+        a{
+            color: #333;
+        }
+        a:hover{
+            color: #000;
+
+        }
+    </style>
+    
+    <style>
+        .flow-container {
+            display: flex;
+            /* flex-direction: column; */
+            align-items: center;
+            position: relative;
+        }
+        .stage {
+            display: flex;
+            align-items: center;
+            margin: 20px 0;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.5s ease;
+        }
+        .icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: #4ecdc4;
+            /* #4a90e2; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 20px;
+            color: white;
+            font-size: 24px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .content {
+            background-color: white;
+            padding: 15px 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .content h3 {
+            margin: 0 0 5px 0;
+        }
+        .content p {
+            margin: 0;
+            font-size: 15px;
+            color: #333;
+        }
+        #svgContainer {
+            position: absolute;
+            top: 0;
+            left: 30px;
+            height: 100%;
+            z-index: -1;
+        }
+        .stage.current .icon {
+            background-color: #e74c3c;
+            animation: pulse 2s infinite;
+        }
+        .stage .content {
+            border-left: 4px solid #4ecdc4;
+        }
+        .stage.current .content {
+            border-left: 4px solid #e74c3c;
+        }
+        .date-time{
+            color: #666;font-size: 14px;margin-top: 15px;
+        }
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(231, 76, 60, 0.4);
+            }
+            70% {
+                box-shadow: 0 0 0 20px rgba(231, 76, 60, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(231, 76, 60, 0);
+            }
+        }
+    </style>
+
+    <style>
+        .font-family {
+            font-family: "Hedvig Letters Serif", serif;
+            font-optical-sizing: auto;
+            font-style: normal;
+        }
+
+        @media screen and (max-width: 1010px) {
+            .hero{
+                flex-flow: wrap;
+                flex-direction: column;
+            }
+            .hero-image {
+                width: 95%;
+                height: auto;
+                max-width: 500px;
+                margin-top: 5rem;
+                margin-bottom: 2rem;
+            }
+        }
+        @media screen and (max-width: 900px) {
+            .max-900{
+                display: none;
+            }
+            .button-container{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            #hero-button{
+                width: 95%;
+            }
+            .hero-text h1, .hero-text p, .hero-text, h2 {
+                text-align: center;
+            }
+        }
+        @media screen and (max-width: 700px) {
+            .max-700{
+                display: none;
+            }
+        }
+        @media screen and (max-width: 500px) {
+            .max-500{
+                display: none;
+            }
+            .hero-image {
+                margin-top: 5rem;
+            }
+            .icon{
+                width: 40px;
+                height: 40px;
+            }
+            .content{
+                margin-left: -15px;
+            }
+            #journey{
+                margin-left: -15px;
+            }
+        }
+    </style>
+
+</head>
+<body class="font-family">
+    <div class="container">
+        <header style="border-bottom: 1px solid #eee;padding-bottom: 5px;">
+            <div style="display: flex;align-items: center;"  class="logo">
+                <img style="display: block;border-radius: 50%;width: 50px;height: 50px;border: 1px solid #eee;" alt="Bismark's photo" src="dist/images/kbismark.png" />
+                <div style="margin-left: 10px;" class="max-500">
+                    <div style="font-weight: 800;font-size: 18px;;">Bismark Yamoah</div>
+                    <div style="font-size: 14px;;">Software Engineer <span class="max-700"> || Computer Science Graduate</span> <span class="max-900" style="display: none;"> || Co-founder of MountStech</span> </div>
+                </div>
+            </div>
+            <nav>
+                <a href="#about">About</a>
+                <a href="#works">Work</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </header>
+
+        <section style="margin-bottom: 7.7rem;" class="hero">
+            <div class="hero-text">
+                <p>Programming | Problem-solving</p>
+                <h1>Frontend Web Designer</h1>
+                <p style="max-width: 800px;">
+                    I transform your ideas into captivating digital experiences. Specialized in 
+                    creating responsive, user-friendly interfaces, implementing modern web technologies
+                    and translating complex concepts into intuitive, visually appealing designs.
+                </p>
+                <button id="hero-button" style="margin-top: 10px;">Contact</button>
+            </div>
+            <div class="hero-image">
+                <img style="display: block;border-top-left-radius: 100px;border-bottom-right-radius: 100px;border: 1px solid #eee;" src="dist/images/kbismark.jpg" alt="Frontend Web Designer portrait">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+            </div>
+        </section>
+        
+        <section id="journey">
+            <h2>The Journey...</h2>
+            <div class="flow-container">
+                <svg id="svgContainer" width="30">
+                    <path d="M30 0 V 1000" stroke="#eee" stroke-width="2" fill="none" stroke-dasharray="5,5" />
+                </svg>
+                <div style="display: flex;flex-direction: column-reverse;">
+                    <div class="stage" data-step="1">
+                        <div><div class="icon">1</div></div>
+                        <div class="content">
+                            <h3>The Beginning...</h3>
+                            <p>
+                                I came across a story about the beginning of facebook. I got interested in how a 22 year old Mark could 
+                                create facebook. I was not yet 22 years old but I wanted to give it a try. Could I also create something 
+                                everyone would use and talk about? I asked. And that was the first question of the thousands I have asked so far about 
+                                computer programming. Fast forward to 2021, I got my first laptop and started putting into practice everything 
+                                I knew through the books I read. Many of the projects, I couldn't keep record of because I didn't know about Git. 
+                                Take a look at the first project I pushed on github <a style="font-weight: 600;" href="https://github.com/KBismark/nosc" 
+                                target="_blank" rel="noopener noreferrer"> here</a>. 
+                                <!-- After senior high school, I veered off the path to becoming a professional accountant and 
+                                transformed into a sleepless young enthusiast, very passionate and eager to know about the world of technology. 
+                                <br />
+                                I had zero knowledge on how to use computers. I could only dream about all the things I wanted 
+                                to do with programming if I became one. Without a laptop to try out the code examples from the books I read, 
+                                it was only the thoughts of the things I wanted to do that kept me going.
+                                <br />
+                                Fast forward, it was time to apply for undergraduate degree course. Accounting was my preferred course but 
+                                if I got admitted into 
+                                a computer science degree course then it would be a requirement for my parents to get me laptop. I took my chances and that 
+                                was how I got my first laptop which marks the beginning of my journey into the tech world.   -->
+                            </p>
+                            <div class="date-time">April, 2020 - January, 2021</div>
+                        </div>
+                        
+                    </div>
+                    <div class="stage" data-step="2">
+                        <div><div class="icon">2</div></div>
+                        <div class="content">
+                            <h3>Computer Science Student</h3>
+                            <p>
+                                Got admitted into the  
+                                <a href="https://www.ug.edu.gh/" target="_blank" rel="noopener noreferrer" style="font-weight: 600;" > 
+                                    University of Ghana 
+                                </a> to pursue Computer Science undergraduate degree in 2021. Within the four years as a student, I got the chance to 
+                                build projects that enhanced my programming experience and teamwork skills through project works, group works and individual assignments. 
+                                I also took the opportunity to learn about the advanced programming algorithms and concepts used in our daily life activities.
+                            </p>
+                            <div class="date-time">January, 2021 - September, 2024</div>
+                        </div>
+                    </div>
+                    <div class="stage current" data-step="3">
+                        <div><div class="icon">3</div></div>
+                        <div class="content">
+                            <h3>Backend engineer</h3>
+                            <p>
+                                I am currently a national service personnel at the 
+                                <a href="https://amalitech.org/" target="_blank" rel="noopener noreferrer" style="font-weight: 600;" > 
+                                    AmaliTech Ghana
+                                </a>. 
+                                This is an obligatory service to the state after tertiary education in accordance with the laws and the constitution of Ghana, (Act 426). 
+                            </p>
+                            <div class="date-time">October, 2024 - Present</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <script>
+            function animateFlow() {
+                const stages = document.querySelectorAll('.stage');
+                const svgPath = document.querySelector('#svgContainer path');
+                const pathLength = svgPath.getTotalLength();
+    
+                svgPath.style.strokeDasharray = pathLength;
+                svgPath.style.strokeDashoffset = pathLength;
+    
+                stages.forEach((stage, index) => {
+                    setTimeout(() => {
+                        stage.style.opacity = '1';
+                        stage.style.transform = 'translateY(0)';
+    
+                        const progress = (index + 1) / stages.length;
+                        svgPath.style.strokeDashoffset = pathLength - (pathLength * progress);
+                    }, index * 500);
+                });
+            }
+
+            // window.addEventListener('load', animateFlow);
+            animateFlow()
+        </script>
+        <!-- <div style="display: flex;justify-content: center;margin-top: 6.7rem;margin-bottom: 5.1rem;padding-bottom: 20;border-bottom: 1px solid #eee;padding-top: 20;border-top: 1px solid #eee;">
+            <img style="display: block;width: 100%;max-width: 1000px;" src="dist/images/frontend_tech_stack.png" alt="Tech stacks">
+        </div> -->
+        
+        <section id="#profiles" style="margin-top: 6.3rem;">
+            <h2>Specialization Profiles</h2>
+            <div class="services">
+                <div class="service" style="border: 1px solid #eee;cursor: pointer;">
+                    <div style="overflow: hidden;display: flex;justify-content: center;">
+                        <img style="width: 150px;height: auto;display: block;border-radius: 50%;" alt="Frontend projects' profile" src="dist/images/frontend_profile-removebg-preview.png" />
+                    </div>
+                    <h3 style="margin-top: 0px;">Frontend design </h3>
+                    <p>A collection of projects built using frontend tech including HTML, CSS, JavaScript and React.</p>
+                    <a href="/#">See profile</a>
+                </div>
+                <div class="service" style="border: 1px solid #eee;cursor: pointer;display: none;">
+                    <div style="overflow: hidden;display: flex;justify-content: center;">
+                        <img style="width: 150px;height: auto;display: block;border-radius: 50%;" alt="Frontend projects' profile" src="dist/images/mobile_profile-removebg-preview.png" />
+                    </div>
+                    <h3>Mobile app design </h3>
+                    <p>View a collection of the latest mobile appication projects built using React Native.</p>
+                    <a href="/#">See profile</a>
+                </div>
+                <div class="service" style="border: 1px solid #eee;cursor: pointer;">
+                    <div style="overflow: hidden;display: flex;justify-content: center;">
+                        <img style="width: 150px;height: auto;display: block;border-radius: 50%;" alt="Frontend projects' profile" src="dist/images/mobile_profile-removebg-preview.png" />
+                    </div>
+                    <h3>JavaScript/TypeScript </h3>
+                    <p>View a collection of the latest mobile appication projects built using React Native.</p>
+                    <a href="/#">See profile</a>
+                </div>
+                <div class="service" style="border: 1px solid #eee;cursor: pointer;">
+                    <div style="overflow: hidden;display: flex;justify-content: center;">
+                        <img style="width: 150px;height: auto;display: block;border-radius: 50%;" alt="Frontend projects' profile" src="dist/images/backend_profile-removebg-preview.png" />
+                    </div>
+                    <h3>Backend development </h3>
+                    <p>These projects include applications with implementation of backend technologies.</p>
+                    <a href="/#">See profile</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="works" class="portfolio" style="margin-top: 6rem;" >
+            <h2>Latest work</h2>
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <img src="/api/placeholder/300/200" alt="Project 1">
+                    <h3>Project title</h3>
+                    <p>UI, Art direction</p>
+                </div>
+                <div class="portfolio-item">
+                    <img src="/api/placeholder/300/200" alt="Project 2">
+                    <h3>Project title</h3>
+                    <p>UI, Art direction</p>
+                </div>
+                <div class="portfolio-item">
+                    <img src="/api/placeholder/300/200" alt="Project 3">
+                    <h3>Project title</h3>
+                    <p>UI, Art direction</p>
+                </div>
+                <div class="portfolio-item">
+                    <img src="/api/placeholder/300/200" alt="Project 4">
+                    <h3>Project title</h3>
+                    <p>UI, Art direction</p>
+                </div>
+                <div class="portfolio-item">
+                    <img src="/api/placeholder/300/200" alt="Project 5">
+                    <h3>Project title</h3>
+                    <p>UI, Art direction</p>
+                </div>
+                <div class="portfolio-item">
+                    <img src="/api/placeholder/300/200" alt="Project 6">
+                    <h3>Project title</h3>
+                    <p>UI, Art direction</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="works" class="portfolio" style="margin-top: 6rem;" >
+            <h2>NPM Packages (TS/JS)</h2>
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <h3>
+                        
+                        <a href="https://statestorejs.netlify.app/" target="_blank" rel="noopener noreferrer" > 
+                            Statestore.js
+                        </a>
+                    </h3>
+                    <p>
+                        A state management library for reactively and selectively updating parts of applications.
+                        
+                    </p>
+                </div>
+                <div class="portfolio-item">
+                    <h3>
+                        
+                        <a href="https://github.com/KBismark/remove-style#readme" target="_blank" rel="noopener noreferrer" > 
+                            Remove-Style
+                        </a>
+                    </h3>
+                    <p>
+                        Gets rid of all inline style attributes from html tags in an html file or html text.
+                        
+                    </p>
+                </div>
+                <div class="portfolio-item">
+                    <h3>
+                        
+                        <a href="https://github.com/KBismark/xyntax#readme" target="_blank" rel="noopener noreferrer" > 
+                            Xyntax
+                        </a>
+                    </h3>
+                    <p>
+                        JavaScript and JSX syntax highlighting with Regular expressions. 
+                        
+                    </p>
+                </div>
+                <div class="portfolio-item">
+                    <h3>
+                        
+                        <a href="https://github.com/KBismark/xolus#readme" target="_blank" rel="noopener noreferrer" > 
+                            Xolus
+                        </a>
+                    </h3>
+                    <p>
+                        A JSX templating engine and a progressive html rendering framework. 
+                        
+                    </p>
+                </div>
+                <div class="portfolio-item">
+                    <h3>
+                        
+                        <a href="https://github.com/KBismark/react-native-paging-swipper#readme" target="_blank" rel="noopener noreferrer" > 
+                            react-native-paging-swipper
+                        </a>
+                    </h3>
+                    <p>
+                        A react native content pagination and swipping. Think of TikTok scrolling feature and Instagram image 
+                        swipping feature. 
+                        This package is being used privately at the moment and yet to be documented.
+                        
+                    </p>
+                </div>
+                <div class="portfolio-item">
+                    <h3>
+                        
+                        <a href="https://github.com/KBismark/guther#readme" target="_blank" rel="noopener noreferrer" > 
+                            Guther
+                        </a>
+                    </h3>
+                    <p>
+                        A simple JSON file database managemnt system. Stores JSON data as json files and allow concurrent access to same file 
+                        at a time in nodejs applications. 
+                        This package is being used privately at the moment and yet to be documented.
+                        
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonials" style="display: none;" >
+            <h2>Testimonial</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial">
+                    <p>This is a template Figma file, turned into code using Anima. Learn more at AnimaApp.com</p>
+                    <div class="testimonial-author">
+                        <img src="/api/placeholder/50/50" alt="Gemma Nolen">
+                        <p>Gemma Nolen</p>
+                        <p>Google</p>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <p>This is a template Figma file, turned into code using Anima. Learn more at AnimaApp.com</p>
+                    <div class="testimonial-author">
+                        <img src="/api/placeholder/50/50" alt="Gemma Nolen">
+                        <p>Gemma Nolen</p>
+                        <p>Google</p>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <p>This is a template Figma file, turned into code using Anima. Learn more at AnimaApp.com</p>
+                    <div class="testimonial-author">
+                        <img src="/api/placeholder/50/50" alt="Gemma Nolen">
+                        <p>Gemma Nolen</p>
+                        <p>Google</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact" style="margin-top: 6.2rem;" >
+            <h2>Let's work together</h2>
+            <p>This is a template Figma file, turned into code using Anima. Learn more at AnimaApp.com</p>
+            <form>
+                <input type="text" placeholder="Name" required>
+                <input type="email" placeholder="Email" required>
+                <textarea placeholder="Message" required></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+
+        <footer>
+            <a href="#" aria-label="Twitter">Twitter Icon</a>
+            <a href="#" aria-label="Facebook">Facebook Icon</a>
+            <a href="#" aria-label="Instagram">Instagram Icon</a>
+            <a href="#" aria-label="Dribbble">Dribbble Icon</a>
+            <a href="#" aria-label="Behance">Behance Icon</a>
+        </footer>
+    </div>
+    <link href="https://fonts.googleapis.com/css2?family=Hedvig+Letters+Serif:opsz@12..24&display=swap" rel="stylesheet">
+</body>
+</html>

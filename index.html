@@ -5,687 +5,456 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KBismark - A software engineer, experienced in creating and designing web applications, websites and developing mobile apps. </title>
     <link rel="shortcut icon" href="./dist/images/kbismark.png" type="image/x-icon">
+    <link href="./dist/css.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <style>
-        *{
-            transition-property: all;
-            transition-duration: .3s;
-            transition-timing-function: linear;
-        }
-        body, html {
-            margin: 0;
-            padding: 0;
-            /* font-family: Arial, sans-serif; */
-            font-weight: 500;font-size: 16px;line-height: 1.6;
-        }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        nav a {
-            margin-left: 20px;
-            text-decoration: none;
-            color: #333;
-            font-weight: 600;
-        }
-        nav a:hover{
-            color: #000;
-        }
-        .hero {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-top: 50px;
-        }
-        .hero-text h1 {
-            font-size: 48px;
-            margin-bottom: 10px;
-        }
-        .hero-image {
-            position: relative;
-            width: 300px;
-            height: 300px;
-        }
-        .hero-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        .shape {
-            position: absolute;
-            width: 50px;
-            height: 50px;
-        }
-        .shape-1 {
-            top: -25px;
-            right: -25px;
-            background-color: #ff6b6b;
-            border-radius: 0 50% 50% 50%;
-        }
-        .shape-2 {
-            bottom: -25px;
-            left: -25px;
-            background-color: #4ecdc4;
-            border-radius: 50% 50% 50% 0;
-        }
-        .clients {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 50px;
-        }
-        .clients img {
-            height: 30px;
-        }
-        .services {
-            display: flex;
-            justify-content: space-around;
-            margin-top: 50px;
-            flex-flow: wrap;
-        }
-        .service {
-            text-align: center;
-            width: 30%;
-            min-width: 380px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            margin-bottom: 20px;
-        }
-        /* .service:hover{
-            box-shadow: 0px 13px 24px rgba(194, 194, 194, 0.23);
-        } */
-        .service p{
-            font-size: 16px;
-            padding-right: 15px;
-            padding-left: 15px;
-        }
-        .service a{
-            background-color: #333;
-            color: white;
-            border: none;
-            padding: 12px 20px;
-            cursor: pointer;
-            font-size: 18px;
-            min-width: 280px;
-            text-align: center;
-            font-weight: 600;
-            text-decoration: none;
-            
-            margin: 5px 15px 15px;
-            display: block;
-            /* width: calc(100% - 30px);  */
-        }
-        .service a:hover{
-            background-color: #000;
-            color: white;
-        }
-        .service-icon {
-            width: 70px;
-            height: 700px;
-            margin: 0 auto;
-            background-color: #f0f0f0;
-            border-radius: 50%;
-            margin-top: 15px;
-        }
-        .portfolio {
-            margin-top: 50px;
-        }
-        .portfolio-grid {
-            display: flex;
-            /* grid-template-columns: repeat(3, 1fr);
-            gap: 20px; */
-            flex-direction: row;
-            flex-flow: wrap;
-            justify-content: space-around;
-        }
-        .portfolio-item{
-            width: 30%;
-            min-width: 350px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            padding: 15px 10px;
-            margin-bottom: 20px;
-        }
-        .portfolio-item img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-        }
-        .testimonials {
-            margin-top: 50px;
-        }
-        .testimonial-grid {
-            /* display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px; */
-            display: flex;
-            justify-content: space-around;
-            /* margin-top: 50px; */
-            flex-flow: wrap;
-        }
-        .testimonial {
-            background-color: #f0f0f0;
-            padding: 20px;
-            border-radius: 10px;
-
-            min-width: 320px;
-        }
-        .contact {
-            margin-top: 50px;
-        }
-        form {
-            display: grid;
-            gap: 10px;
-        }
-        input, textarea {
-            width: 100%;
-            padding: 10px;
-        }
-        button {
-            background-color: #333;
-            color: white;
-            border: none;
-            padding: 12px 20px;
-            cursor: pointer;
-            font-size: 18px;
-            min-width: 280px;
-            text-align: center;
-            font-weight: 600;
-            
-        }
-        button:hover{
-            background-color: #000;
-        }
-        footer {
-            margin-top: 50px;
-            text-align: center;
-        }
-        a{
-            color: #333;
-        }
-        a:hover{
-            color: #000;
-
-        }
-    </style>
-    
-    <style>
-        .flow-container {
-            display: flex;
-            /* flex-direction: column; */
-            align-items: center;
-            position: relative;
-        }
-        .stage {
-            display: flex;
-            align-items: center;
-            margin: 20px 0;
-            opacity: 0;
-            transform: translateY(20px);
-            transition: all 0.5s ease;
-        }
-        .icon {
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            background-color: #4ecdc4;
-            /* #4a90e2; */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-right: 20px;
-            color: white;
-            font-size: 24px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-        .content {
-            background-color: white;
-            padding: 15px 25px;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-        .content h3 {
-            margin: 0 0 5px 0;
-        }
-        .content p {
-            margin: 0;
-            font-size: 15px;
-            color: #333;
-        }
-        #svgContainer {
-            position: absolute;
-            top: 0;
-            left: 30px;
-            height: 100%;
-            z-index: -1;
-        }
-        .stage.current .icon {
-            background-color: #e74c3c;
-            animation: pulse 2s infinite;
-        }
-        .stage .content {
-            border-left: 4px solid #4ecdc4;
-        }
-        .stage.current .content {
-            border-left: 4px solid #e74c3c;
-        }
-        .date-time{
-            color: #666;font-size: 14px;margin-top: 15px;
-        }
-        @keyframes pulse {
-            0% {
-                box-shadow: 0 0 0 0 rgba(231, 76, 60, 0.4);
-            }
-            70% {
-                box-shadow: 0 0 0 20px rgba(231, 76, 60, 0);
-            }
-            100% {
-                box-shadow: 0 0 0 0 rgba(231, 76, 60, 0);
-            }
-        }
-    </style>
-
-    <style>
-        .font-family {
-            font-family: "Hedvig Letters Serif", serif;
-            font-optical-sizing: auto;
-            font-style: normal;
-        }
-
-        @media screen and (max-width: 1010px) {
-            .hero{
-                flex-flow: wrap;
-                flex-direction: column;
-            }
-            .hero-image {
-                width: 95%;
-                height: auto;
-                max-width: 500px;
-                margin-top: 5rem;
-                margin-bottom: 2rem;
-            }
-        }
-        @media screen and (max-width: 900px) {
-            .max-900{
-                display: none;
-            }
-            .button-container{
-                display: flex;
-                justify-content: center;
-                align-items: center;
-            }
-            #hero-button{
-                width: 95%;
-            }
-            .hero-text h1, .hero-text p, .hero-text, h2 {
-                text-align: center;
-            }
-        }
-        @media screen and (max-width: 700px) {
-            .max-700{
-                display: none;
-            }
-        }
-        @media screen and (max-width: 500px) {
-            .max-500{
-                display: none;
-            }
-            .hero-image {
-                margin-top: 5rem;
-            }
-            .icon{
-                width: 40px;
-                height: 40px;
-            }
-            .content{
-                margin-left: -15px;
-            }
-            #journey{
-                margin-left: -15px;
-            }
-        }
-    </style>
-
 </head>
-<body class="font-family">
-    <div class="container">
-        <header style="border-bottom: 1px solid #eee;padding-bottom: 5px;">
-            <div style="display: flex;align-items: center;"  class="logo">
-                <img style="display: block;border-radius: 50%;width: 50px;height: 50px;border: 1px solid #eee;" alt="Bismark's photo" src="dist/images/kbismark.png" />
-                <div style="margin-left: 10px;" class="max-500">
-                    <div style="font-weight: 800;font-size: 18px;;">Bismark Yamoah</div>
-                    <div style="font-size: 14px;;">Software Engineer <span class="max-700"> || Computer Science Graduate</span> <span class="max-900" style="display: none;"> || Co-founder of MountStech</span> </div>
-                </div>
+<body class="font-family" style="font-weight: 500;font-size: 18px;line-height: 1.6;">
+    <header style="padding: 7px 0px 5px 15px;background-color: #000000;">
+        <nav>
+            <ul style="display: flex;justify-content: center;flex-flow: wrap;align-items: center;margin: 0px;padding: 0px;">
+                <li>
+                    <a href="mailto:bismarkkwabenayamoah@gmail.com"  style="display: block;color: #ebebeb;font-size: 13px; margin-right: 15px;display: flex;align-items: center;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ebebeb" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                            <path d="M5 12l14 0" />
+                            <path d="M15 16l4 -4" />
+                            <path d="M15 8l4 4" />
+                        </svg>
+                        <span style="color: #ebebeb;font-size: 13px;">Email: bismarkkwabenayamoah@gmail.com</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/KBismark"  style="display: block;color: #ebebeb;font-size: 13px; margin-right: 15px;display: flex;align-items: center;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ebebeb" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                            <path d="M5 12l14 0" />
+                            <path d="M15 16l4 -4" />
+                            <path d="M15 8l4 4" />
+                        </svg>
+                        <span style="color: #ebebeb;font-size: 13px;">Github.com/KBismark</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="hero" style="position: relative;z-index: 5;">
+            <div class="hero-img-container">
+                <img src="./dist/images/kbismark.jpg" alt="An image of Bismark Yamoah" style="display: block;width: 100%;" />
             </div>
-            <nav>
-                <a href="#about">About</a>
-                <a href="#works">Work</a>
-                <a href="#contact">Contact</a>
-            </nav>
-        </header>
-
-        <section style="margin-bottom: 7.7rem;" class="hero">
-            <div class="hero-text">
-                <p>Programming | Problem-solving</p>
-                <h1>Frontend Web Designer</h1>
-                <p style="max-width: 800px;">
-                    I transform your ideas into captivating digital experiences. Specialized in 
-                    creating responsive, user-friendly interfaces, implementing modern web technologies
-                    and translating complex concepts into intuitive, visually appealing designs.
+            <div class="hero-text-container">
+                <h1 class="font-family" style="margin-bottom: 0px;">Bismark Yamoah</h1>
+                <p style="margin-top: 0px;">
+                    <span style="font-weight: bold;">Software Engineer </span>
+                    <br />
+                    <span style="font-size: 70%;color: #eee;">Mobile app development </span>
+                    <span style="font-size: 70%;color: #eee;">- Web development - </span>
+                    <span style="font-size: 70%;color: #eee;">Backend development </span>
                 </p>
-                <button id="hero-button" style="margin-top: 10px;">Contact</button>
             </div>
-            <div class="hero-image">
-                <img style="display: block;border-top-left-radius: 100px;border-bottom-right-radius: 100px;border: 1px solid #eee;" src="dist/images/kbismark.jpg" alt="Frontend Web Designer portrait">
-                <div class="shape shape-1"></div>
-                <div class="shape shape-2"></div>
-            </div>
-        </section>
-        
-        <section id="journey">
-            <h2>The Journey...</h2>
-            <div class="flow-container">
-                <svg id="svgContainer" width="30">
-                    <path d="M30 0 V 1000" stroke="#eee" stroke-width="2" fill="none" stroke-dasharray="5,5" />
-                </svg>
-                <div style="display: flex;flex-direction: column-reverse;">
-                    <div class="stage" data-step="1">
-                        <div><div class="icon">1</div></div>
-                        <div class="content">
-                            <h3>The Beginning...</h3>
-                            <p>
-                                I came across a story about the beginning of facebook. I got interested in how a 22 year old Mark could 
-                                create facebook. I was not yet 22 years old but I wanted to give it a try. Could I also create something 
-                                everyone would use and talk about? I asked. And that was the first question of the thousands I have asked so far about 
-                                computer programming. Fast forward to 2021, I got my first laptop and started putting into practice everything 
-                                I knew through the books I read. Many of the projects, I couldn't keep record of because I didn't know about Git. 
-                                Take a look at the first project I pushed on github <a style="font-weight: 600;" href="https://github.com/KBismark/nosc" 
-                                target="_blank" rel="noopener noreferrer"> here</a>. 
-                                <!-- After senior high school, I veered off the path to becoming a professional accountant and 
-                                transformed into a sleepless young enthusiast, very passionate and eager to know about the world of technology. 
-                                <br />
-                                I had zero knowledge on how to use computers. I could only dream about all the things I wanted 
-                                to do with programming if I became one. Without a laptop to try out the code examples from the books I read, 
-                                it was only the thoughts of the things I wanted to do that kept me going.
-                                <br />
-                                Fast forward, it was time to apply for undergraduate degree course. Accounting was my preferred course but 
-                                if I got admitted into 
-                                a computer science degree course then it would be a requirement for my parents to get me laptop. I took my chances and that 
-                                was how I got my first laptop which marks the beginning of my journey into the tech world.   -->
-                            </p>
-                            <div class="date-time">April, 2020 - January, 2021</div>
-                        </div>
-                        
-                    </div>
-                    <div class="stage" data-step="2">
-                        <div><div class="icon">2</div></div>
-                        <div class="content">
-                            <h3>Computer Science Student</h3>
-                            <p>
-                                Got admitted into the  
-                                <a href="https://www.ug.edu.gh/" target="_blank" rel="noopener noreferrer" style="font-weight: 600;" > 
-                                    University of Ghana 
-                                </a> to pursue Computer Science undergraduate degree in 2021. Within the four years as a student, I got the chance to 
-                                build projects that enhanced my programming experience and teamwork skills through project works, group works and individual assignments. 
-                                I also took the opportunity to learn about the advanced programming algorithms and concepts used in our daily life activities.
-                            </p>
-                            <div class="date-time">January, 2021 - September, 2024</div>
-                        </div>
-                    </div>
-                    <div class="stage current" data-step="3">
-                        <div><div class="icon">3</div></div>
-                        <div class="content">
-                            <h3>Backend engineer</h3>
-                            <p>
-                                I am currently a national service personnel at the 
-                                <a href="https://amalitech.org/" target="_blank" rel="noopener noreferrer" style="font-weight: 600;" > 
-                                    AmaliTech Ghana
-                                </a>. 
-                                This is an obligatory service to the state after tertiary education in accordance with the laws and the constitution of Ghana, (Act 426). 
-                            </p>
-                            <div class="date-time">October, 2024 - Present</div>
-                        </div>
-                    </div>
-                </div>
+        </div>
+        <section class="content-bg">
+            <div style="margin-top: 2%;display: flex;justify-content: center;">
+                <p class="message" style="max-width: 800px;padding: 0px 15px;text-align: justify;">
+                    Results-driven software developer with a deep passion for problem-solving and a keen ability to strategize and create tools 
+                    that address critical challenges. 
+                    <br/><br/>
+                    Strong foundation in JavaScript/TypeScript, HTML and CSS with experience in creating 
+                    web and mobile applications using React Native/React, Nodejs(Express) and MongoDB.
+                </p>
             </div>
         </section>
-    
-        <script>
-            function animateFlow() {
-                const stages = document.querySelectorAll('.stage');
-                const svgPath = document.querySelector('#svgContainer path');
-                const pathLength = svgPath.getTotalLength();
-    
-                svgPath.style.strokeDasharray = pathLength;
-                svgPath.style.strokeDashoffset = pathLength;
-    
-                stages.forEach((stage, index) => {
-                    setTimeout(() => {
-                        stage.style.opacity = '1';
-                        stage.style.transform = 'translateY(0)';
-    
-                        const progress = (index + 1) / stages.length;
-                        svgPath.style.strokeDashoffset = pathLength - (pathLength * progress);
-                    }, index * 500);
-                });
+        <style>
+            p.message{
+                font-size: 24px;
+            }
+            article{
+                width: 500px;
+                border: 1px solid #eee;
+                border-radius: 20px;
+                padding: 10px;
+                box-shadow: 0px 0px 2px 2px #afa2a242;
+                cursor: pointer;
+                transition-property: all;
+                transition-duration: .3s;
+                transition-timing-function: ease;
+                margin: 15px;
+                background-color: #ebebeb6c;
+            }
+            article:hover{
+                box-shadow: 0px 6px 8px 5px #afa2a242;
+            }
+            article .image-container{
+                width: 100%;
+                overflow: hidden;
+                max-height: 250px;
+                background-color: #ececec;
+            }
+            article img{
+                width: 100%;
+                height: auto;
+                display: block;
+                border-radius: 10px;
+            }
+            article video{
+                width: 100%;
+                height: auto;
+                display: block;
+                border-radius: 5px;
+            }
+            
+            article h3{
+                margin: 0px;display: inline;font-size: 0px;
+                padding: 0px;opacity: 0;
+            }
+            article p{
+                text-align: justify;
+            }
+            article .description{
+                padding: 0px 10px 15px;
+                text-align: justify;
+                margin: 0px;
+            }
+            article .tools{
+                display: flex;
+                align-items: center;
+                padding: 15px 0px;
+                flex-flow: wrap;
+                justify-content: flex-start;
+            }
+            ul.tools{
+                margin: 0px;
+                padding: 15px 0px;
+                list-style: none;
+            }
+            ul.tools li{
+                list-style: none;
+                marker: none;
+            }
+            article .tools .item{
+                border-radius: 6px;
+                padding: 5px 10px;
+                font-size: 13px;
+                text-align: center;
+                margin: 0px 5px;
+                margin-bottom: 5px;
+            }
+            .tools .item.js{
+                background-color: #bda3142d;
+                color: #a8910c;
+            }
+            .tools .item.mongo{
+                background-color: #13934f17;
+                color: #13934ff8;
+            }
+            .tools .item.react{
+                background-color: #13938817;
+                color: #0d867cf6;
+            }
+            .tools .item.ts{
+                background-color: #13599317;
+                color: #0d528afa;
+            }
+            .tools .item.css{
+                background-color: #93139317;
+                color: #630a4fea;
+            }
+            .tools .item.ex{
+                background-color: #93132817;
+                color: #931328fa;
+            }
+            .tools .item.html{
+                background-color: #93311317;
+                color: #ad230a;
             }
 
-            // window.addEventListener('load', animateFlow);
-            animateFlow()
-        </script>
-        <!-- <div style="display: flex;justify-content: center;margin-top: 6.7rem;margin-bottom: 5.1rem;padding-bottom: 20;border-bottom: 1px solid #eee;padding-top: 20;border-top: 1px solid #eee;">
-            <img style="display: block;width: 100%;max-width: 1000px;" src="dist/images/frontend_tech_stack.png" alt="Tech stacks">
-        </div> -->
+            @media screen and (max-width: 510px) {
+                article{
+                    width: 100%;
+                    cursor: none;
+                    margin: 5px 0px;
+                    box-shadow: none;
+                    border-radius: 0px;
+                }
+                article:hover{
+                    box-shadow: none;
+                }
+                p.message{
+                    font-size: 20px;
+                }
+
+            }
+        </style>
+        <section style="display: flex;flex-direction: column;align-items: center;">
+            <h2 style="text-align: center;margin-top: 3%;font-size: 3.3rem;">Projects</h2>
+            <div style="width: 100%;margin: auto;display: flex;flex-flow: wrap;justify-content: space-around;max-width: 1080px;">
+
+                <article>
+                    <h3>Spyweb </h3>
+                    <div class="image-container">
+                        <video controls poster="./dist//images/spyweb.png" >
+                            <source src="./dist/videos/spyweb.mp4"  type="video/mp4">
+                        </video>
+                    </div>
+                    <ul class="tools" aria-label="List of some tech stacks, frameworks and libraries used in this project">
+                        <li class="item react">Reactjs</li>
+                        <li class="item ts">TypeScript</li>
+                        <li class="item js">Nodejs</li>
+                        <li class="item ex">Expressjs</li>
+                        <li class="item mongo">Mongodb</li>
+                    </ul>
+                    <p class="description">
+                        <strong>Spyweb </strong> is a full stack chat application that supports sending and receiving of messages, images and 
+                        other file types to and from users. Spyweb was created using Reactjs as the frontend library, 
+                        Nodejs and Expressjs as the backend framework, and Mongodb as the database for storing data. 
+                        <br/>  <br/>
+                        Notable features implemented include user authentication and message encryption to ensure security in the application. 
+                        Other features (ongoing) are the ability to make voice and video call, record and send voice notes, and the 
+                        ability for users to watch videos or movies together with real time synchronization while they chat. 
+                        
+                    </p>
+                </article>
+
+                <article>
+                    <h3>File Server</h3>
+                    <!-- <a style="text-decoration: none;color: inherit;" href="https://fileserver-8tgg.onrender.com/" aria-label="Visit file server's page" > -->
+                        <div class="image-container"><img src="./dist/images/fileserver.png" alt="An image of the project's home page"/></div>
+                        <a href="https://github.com/KBismark/fileserver" class="styled-button" style="width: 96%;margin:15px 2% 0px 2%;background-color: #000000;padding: 10px 15px;" >
+                            <span style="color: #ffffff;font-size: 15px;"> Check it out on github</span>
+                         </a>
+                        <ul class="tools" aria-label="List of some tech stacks, frameworks and libraries used in this project">
+                            <li class="item react">Reactjs</li>
+                            <li class="item ts">TypeScript</li>
+                            <li class="item js">Nodejs</li>
+                            <li class="item ex">Expressjs</li>
+                            <li class="item mongo">Mongodb</li>
+                        </ul>
+                        <p class="description">
+                            <strong>File Server </strong> is a simple document sharing platform where files can be easily accessed and downloaded remotely by users. 
+                            It's an application which allows the admin to upload files that can be accessed by users online. File server is a fully functioning  
+                            application developed with the <strong>M</strong>ongodb, <strong>E</strong>xpressjs, <strong>R</strong>eact, and <strong>N</strong>odejs 
+                            (MERN) stack.
+                            <br/>  <br/>
+                            Notable features implemented in this application include user authentication, file sharing via email, file uploads by admin, and file downloads 
+                            by users. 
+                        </p>
+                    <!-- </a> -->
+                </article>
+
+                <article>
+                    <h3>Xolus </h3>
+                    <!-- <a style="text-decoration: none;color: inherit;" href="https://github.com/KBismark/xolus" aria-label="Visit project's github repo " > -->
+                        <div class="image-container"><img src="./dist/images/xolus.png" alt="An image of xolus' development environment in vscode"/></div>
+                        <a href="https://github.com/KBismark/xolus" class="styled-button" style="width: 96%;margin:15px 2% 0px 2%;background-color: #000000;padding: 10px 15px;" >
+                            <span style="color: #ffffff;font-size: 15px;"> Leave a star on github</span>
+                         </a>
+                        <ul class="tools" aria-label="List of some tech stacks, frameworks and libraries used in this project">
+                            <li class="item js">JavaScript</li>
+                            <li class="item ts">TypeScript</li>
+                            <li class="item js">Nodejs</li>
+                        </ul>
+                        <p class="description">
+                            <strong>Xolus </strong> is an ongoing project aimed at developing a framework for creating 
+                            web applications as a solo developer or small team. This project aims at creating applications interactable 
+                            at first sight without waiting on any hydration techniques and to simpify the development 
+                            of HTML and JavaScript applications by taking out the complexity of "known" frameworks.
+                            <br/><br/>
+                            Mainly, it serves more as a JSX templating tool for generating HTML on the server to be 
+                            served to the browser. It also includes ways to pre-generate HTML files to be stored and served as static files. It comes with 
+                            a developer-friendly environment for compiling the JSX code to JavaScript code runnable on the server.
+                        </p>
+                    <!-- </a> -->
+                </article>
+
+                <article>
+                    <h3>InvisibleTipster.com </h3>
+                    <!-- <a style="text-decoration: none;color: inherit;" href="/" aria-label="Visit InvisibleTipster.com" > -->
+                        <div class="image-container"><img src="./dist/images/tipster.png" alt="An image of invisibletipster.com's home page"/></div>
+                        <a href="/" class="styled-button" style="width: 96%;margin:15px 2% 0px 2%;background-color: #000000;padding: 10px 15px;" >
+                            <span style="color: #ffffff;font-size: 15px;"> Visit project's site</span>
+                         </a>
+                        <ul class="tools" aria-label="List of some tech stacks, frameworks and libraries used in this project">
+                            <li class="item react">Xolus</li>
+                            <li class="item js">JavaScript</li>
+                            <li class="item css">CSS</li>
+                            <li class="item js">Nodejs</li>
+                            <li class="item ex">Expressjs</li>
+                            <li class="item html">HTML</li>
+                        </ul>
+                        <p class="description">
+                            <strong>InvisibleTipster.com </strong> is a sports analysis site where football match predictions and tips are shared to sports enthusiasts. 
+                            <br/><br/>
+                            As the creator of this wonderful site for my client, I found it much fulfilling as I built this website using two of my own inventions. For 
+                            such a simple site, I chose to develop with <strong>Xolus</strong> framework and <strong>statestorejs</strong>. With Nodejs and Expressjs for handling the backend logics, 
+                            the website is currently in production serving its users at <i style="font-weight: normal;">invisibletipster.com</i>.
+                            
+
+                        </p>
+                    <!-- </a> -->
+                </article>
+
+                <article>
+                    <h3>Statestore.js </h3>
+                    <!-- <a style="text-decoration: none;color: inherit;" href="https://statestorejs.netlify.app/" aria-label="Visit project's home page" > -->
+                        <div class="image-container"><img src="./dist/images/statestore.png" alt="An image of the project's home page"/></div>
+                        <a href="https://statestorejs.netlify.app/" class="styled-button" style="width: 96%;margin:15px 2% 0px 2%;background-color: #000000;padding: 10px 15px;" >
+                           <span style="color: #ffffff;font-size: 15px;"> View on project's page</span>
+                        </a>
+                        <ul class="tools" aria-label="List of some tech stacks, frameworks and libraries used in this project">
+                            <li class="item js">JavaScript</li>
+                            <li class="item ts">TypeScript</li>
+                        </ul>
+                        
+                        <p class="description">
+                        <strong>Statestore.js </strong> is a simple state management library which allows for reactivity and selectivity in updating 
+                        parts of applications based on changes in the store of states. It is simple, yet powerful in managing states and ensuring 
+                        minimal re-renders when used with <strong>Reactjs</strong>. 
+                        <br/><br/>
+                        Statestore.js can be used in all JavaScript applications and applictions built with TypeScript.
+                        </p>
+                    <!-- </a> -->
+                </article>
+
+                <article>
+                    <h3>Xyntax </h3>
+                    <!-- <a style="text-decoration: none;color: inherit;" href="https://kbis.works/projects/xyntax" aria-label="Visit project's blog page" > -->
+                        <div class="image-container"><img src="./dist/images/xyntax.png" alt="An image of the project's home page"/></div>
+                        <a href="https://kbis.works/projects/xyntax" class="styled-button" style="width: 96%;margin:15px 2% 0px 2%;background-color: #000000;padding: 10px 15px;" >
+                            <span style="color: #ffffff;font-size: 15px;"> View on project's page</span>
+                         </a>
+                        <ul class="tools">
+                            <li class="item js">JavaScript</li>
+                            <li class="item ts">TypeScript</li>
+                            <li class="item js">Nodejs</li>
+                        </ul>
+                        <p class="description">
+                            <strong>Xyntax</strong> is a JavaScript syntax highlighting library which dynamically parses code during development, generating pre-highlighted texts and ensuring zero 
+                            performance issues for your documentation sites. 
+                            <br/><br/>
+                            Xyntax can be used both during development for pre-highlighting texts or can be used in any <strong>Nodejs</strong> 
+                            application to highlight code texts. Xyntax can also be used in React applications for pre-highlighting texts during compile time.
+                        </p>
+                    <!-- </a> -->
+                </article>
+            </div>
+        </section>
+
+        <section >
+            <div style="margin-top: 5%;padding: 0px 15px;display: flex;flex-direction: column;align-items: center;">
+                <h3 style="margin-bottom: 15px;font-size: 125%;">Web development</h3>
+                <p style="max-width: 500px;text-align: center;margin: 0px;">
+                    As an experienced web developer, I specialize in translating your ideas into captivating online experiences. 
+                </p>
+            </div>
+            <div style='display:flex;flex-direction: column;align-items: center;'>
+                <div class="large-showcase" style="margin-bottom: 2%;">
+                    <div class="automobile" style="margin-top: 12%;">
+                        <img src="./dist/images/amazingdhoes.png" alt="An image of an e-commerce website developed by Bismark" />
+                    </div>
+                    <div style="display: flex; justify-content: center;flex-flow: wrap;max-width: 1200px;padding: 0px 3%;margin-top: 5%;">
+                        
+                        <div class="fade-in-at-moibile" style="display:flex;flex-direction: column;align-items: center;">
+                            <h4 style="text-align: center; text-transform: capitalize;">An E-commerce App Built With React </h4>
+                            <a href="https://amazingshoes-elite.netlify.app/" class="styled-button" style="background-color: #000000;" >
+                                <span style="color: #fff;">View this e-commerce app</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-narrow-right" width="26" height="26" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                    <path d="M5 12l14 0" />
+                                    <path d="M15 16l4 -4" />
+                                    <path d="M15 8l4 4" />
+                                </svg>
+                            </a>
+                        </div>
+                        <div></div>
+                    </div>
+                </div>
+                <div class="large-showcase" style="margin-bottom: 8%;" >
+                    <div class="automobile" style="margin-top: -5%;">
+                        <img src="./dist/images/automobile2.png"  alt="An image of a landing page for an automobile firm developed by Bismark"  />
+                    </div>
+                    <div style="display: flex; justify-content: space-between;flex-flow: wrap;max-width: 1200px;padding: 0px 3%;">
+                        <div></div>
+                        <div class="fade-in-at-moibile" style="display:flex;flex-direction: column;align-items: center;">
+                            <h4 style="text-align: center;text-transform: capitalize;">Landing Page for a Luxurious Automobile Company</h4>
+                            <a href="https://luxuryautomobile.netlify.app/" class="styled-button" style="background-color: #000000;" >
+                                <span style="color: #fff;">Visit automobile landing page</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-narrow-right" width="26" height="26" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                    <path d="M5 12l14 0" />
+                                    <path d="M15 16l4 -4" />
+                                    <path d="M15 8l4 4" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="large-showcase" style="margin-bottom: 8%;">
+                    <div class="automobile" style="margin-top: 0px;">
+                        <img src="./dist/images/janetjently.png"  alt="An image of an online shopping site developed by Bismark" />
+                    </div>
+                    <div style="display: flex; justify-content: center;flex-flow: wrap;max-width: 1200px;padding: 0px 3%;margin-top: 5%;">
+                        
+                        <div class="fade-in-at-moibile" style="display:flex;flex-direction: column;align-items: center;">
+                            <h4 style="text-align: center;text-transform: capitalize;">A Simple Online Shop for Janet Gently</h4>
+                            <a href="https://www.janetgently.kbis.works/" class="styled-button" style="background-color: #000000;" >
+                                <span style="color: #fff;">Order items from Janet Gently</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-narrow-right" width="26" height="26" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                    <path d="M5 12l14 0" />
+                                    <path d="M15 16l4 -4" />
+                                    <path d="M15 8l4 4" />
+                                </svg>
+                            </a>
+                        </div>
+                        <div></div>
+                    </div>
+                </div>
+
+                
+
+            </div>
+        </section>
+    </main>
+    <footer>
+        <h2 style="text-align: center;color: #ebebeb;margin: 20px 0px 15px;display: block;">
+            Let's get in touch via email
+        </h2>
+        <div style="display: flex; justify-content: center;flex-flow: wrap;margin-bottom: 3%;">
+                    
+            <a href="mailto:bismarkkwabenayamoah@gmail.com" class="styled-button" style="color: #000000;padding-left: 30px;" >
+                <span style="color: #000;">Send me a message</span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-narrow-right" width="26" height="26" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <path d="M5 12l14 0" />
+                    <path d="M15 16l4 -4" />
+                    <path d="M15 8l4 4" />
+                </svg>
+            </a>
+        </div>
+
+        <h2 style="text-align: center;color: #ebebeb;margin: 20px 0px 15px;display: block;">
+            Check my other public projects out on github
+        </h2>
+        <div style="display: flex; justify-content: center;flex-flow: wrap;margin-bottom: 3%;">
+                    
+            <a href="https://github.com/KBismark" class="styled-button" style="color: #000000;padding-left: 30px;" >
+                <span style="color: #000;">Github.com/KBismark</span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-narrow-right" width="26" height="26" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <path d="M5 12l14 0" />
+                    <path d="M15 16l4 -4" />
+                    <path d="M15 8l4 4" />
+                </svg>
+            </a>
+        </div>
         
-        <section id="#profiles" style="margin-top: 6.3rem;">
-            <h2>Specialization Profiles</h2>
-            <div class="services">
-                <div class="service" style="border: 1px solid #eee;cursor: pointer;">
-                    <div style="overflow: hidden;display: flex;justify-content: center;">
-                        <img style="width: 150px;height: auto;display: block;border-radius: 50%;" alt="Frontend projects' profile" src="dist/images/frontend_profile-removebg-preview.png" />
-                    </div>
-                    <h3 style="margin-top: 0px;">Frontend design </h3>
-                    <p>A collection of projects built using frontend tech including HTML, CSS, JavaScript and React.</p>
-                    <a href="/#">See profile</a>
-                </div>
-                <div class="service" style="border: 1px solid #eee;cursor: pointer;display: none;">
-                    <div style="overflow: hidden;display: flex;justify-content: center;">
-                        <img style="width: 150px;height: auto;display: block;border-radius: 50%;" alt="Frontend projects' profile" src="dist/images/mobile_profile-removebg-preview.png" />
-                    </div>
-                    <h3>Mobile app design </h3>
-                    <p>View a collection of the latest mobile appication projects built using React Native.</p>
-                    <a href="/#">See profile</a>
-                </div>
-                <div class="service" style="border: 1px solid #eee;cursor: pointer;">
-                    <div style="overflow: hidden;display: flex;justify-content: center;">
-                        <img style="width: 150px;height: auto;display: block;border-radius: 50%;" alt="Frontend projects' profile" src="dist/images/mobile_profile-removebg-preview.png" />
-                    </div>
-                    <h3>JavaScript/TypeScript </h3>
-                    <p>View a collection of the latest mobile appication projects built using React Native.</p>
-                    <a href="/#">See profile</a>
-                </div>
-                <div class="service" style="border: 1px solid #eee;cursor: pointer;">
-                    <div style="overflow: hidden;display: flex;justify-content: center;">
-                        <img style="width: 150px;height: auto;display: block;border-radius: 50%;" alt="Frontend projects' profile" src="dist/images/backend_profile-removebg-preview.png" />
-                    </div>
-                    <h3>Backend development </h3>
-                    <p>These projects include applications with implementation of backend technologies.</p>
-                    <a href="/#">See profile</a>
-                </div>
-            </div>
-        </section>
-
-        <section id="works" class="portfolio" style="margin-top: 6rem;" >
-            <h2>Latest work</h2>
-            <div class="portfolio-grid">
-                <div class="portfolio-item">
-                    <img src="/api/placeholder/300/200" alt="Project 1">
-                    <h3>Project title</h3>
-                    <p>UI, Art direction</p>
-                </div>
-                <div class="portfolio-item">
-                    <img src="/api/placeholder/300/200" alt="Project 2">
-                    <h3>Project title</h3>
-                    <p>UI, Art direction</p>
-                </div>
-                <div class="portfolio-item">
-                    <img src="/api/placeholder/300/200" alt="Project 3">
-                    <h3>Project title</h3>
-                    <p>UI, Art direction</p>
-                </div>
-                <div class="portfolio-item">
-                    <img src="/api/placeholder/300/200" alt="Project 4">
-                    <h3>Project title</h3>
-                    <p>UI, Art direction</p>
-                </div>
-                <div class="portfolio-item">
-                    <img src="/api/placeholder/300/200" alt="Project 5">
-                    <h3>Project title</h3>
-                    <p>UI, Art direction</p>
-                </div>
-                <div class="portfolio-item">
-                    <img src="/api/placeholder/300/200" alt="Project 6">
-                    <h3>Project title</h3>
-                    <p>UI, Art direction</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="works" class="portfolio" style="margin-top: 6rem;" >
-            <h2>NPM Packages (TS/JS)</h2>
-            <div class="portfolio-grid">
-                <div class="portfolio-item">
-                    <h3>
-                        
-                        <a href="https://statestorejs.netlify.app/" target="_blank" rel="noopener noreferrer" > 
-                            Statestore.js
-                        </a>
-                    </h3>
-                    <p>
-                        A state management library for reactively and selectively updating parts of applications.
-                        
-                    </p>
-                </div>
-                <div class="portfolio-item">
-                    <h3>
-                        
-                        <a href="https://github.com/KBismark/remove-style#readme" target="_blank" rel="noopener noreferrer" > 
-                            Remove-Style
-                        </a>
-                    </h3>
-                    <p>
-                        Gets rid of all inline style attributes from html tags in an html file or html text.
-                        
-                    </p>
-                </div>
-                <div class="portfolio-item">
-                    <h3>
-                        
-                        <a href="https://github.com/KBismark/xyntax#readme" target="_blank" rel="noopener noreferrer" > 
-                            Xyntax
-                        </a>
-                    </h3>
-                    <p>
-                        JavaScript and JSX syntax highlighting with Regular expressions. 
-                        
-                    </p>
-                </div>
-                <div class="portfolio-item">
-                    <h3>
-                        
-                        <a href="https://github.com/KBismark/xolus#readme" target="_blank" rel="noopener noreferrer" > 
-                            Xolus
-                        </a>
-                    </h3>
-                    <p>
-                        A JSX templating engine and a progressive html rendering framework. 
-                        
-                    </p>
-                </div>
-                <div class="portfolio-item">
-                    <h3>
-                        
-                        <a href="https://github.com/KBismark/react-native-paging-swipper#readme" target="_blank" rel="noopener noreferrer" > 
-                            react-native-paging-swipper
-                        </a>
-                    </h3>
-                    <p>
-                        A react native content pagination and swipping. Think of TikTok scrolling feature and Instagram image 
-                        swipping feature. 
-                        This package is being used privately at the moment and yet to be documented.
-                        
-                    </p>
-                </div>
-                <div class="portfolio-item">
-                    <h3>
-                        
-                        <a href="https://github.com/KBismark/guther#readme" target="_blank" rel="noopener noreferrer" > 
-                            Guther
-                        </a>
-                    </h3>
-                    <p>
-                        A simple JSON file database managemnt system. Stores JSON data as json files and allow concurrent access to same file 
-                        at a time in nodejs applications. 
-                        This package is being used privately at the moment and yet to be documented.
-                        
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <section class="testimonials" style="display: none;" >
-            <h2>Testimonial</h2>
-            <div class="testimonial-grid">
-                <div class="testimonial">
-                    <p>This is a template Figma file, turned into code using Anima. Learn more at AnimaApp.com</p>
-                    <div class="testimonial-author">
-                        <img src="/api/placeholder/50/50" alt="Gemma Nolen">
-                        <p>Gemma Nolen</p>
-                        <p>Google</p>
-                    </div>
-                </div>
-                <div class="testimonial">
-                    <p>This is a template Figma file, turned into code using Anima. Learn more at AnimaApp.com</p>
-                    <div class="testimonial-author">
-                        <img src="/api/placeholder/50/50" alt="Gemma Nolen">
-                        <p>Gemma Nolen</p>
-                        <p>Google</p>
-                    </div>
-                </div>
-                <div class="testimonial">
-                    <p>This is a template Figma file, turned into code using Anima. Learn more at AnimaApp.com</p>
-                    <div class="testimonial-author">
-                        <img src="/api/placeholder/50/50" alt="Gemma Nolen">
-                        <p>Gemma Nolen</p>
-                        <p>Google</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="contact" class="contact" style="margin-top: 6.2rem;" >
-            <h2>Let's work together</h2>
-            <p>This is a template Figma file, turned into code using Anima. Learn more at AnimaApp.com</p>
-            <form>
-                <input type="text" placeholder="Name" required>
-                <input type="email" placeholder="Email" required>
-                <textarea placeholder="Message" required></textarea>
-                <button type="submit">Submit</button>
-            </form>
-        </section>
-
-        <footer>
-            <a href="#" aria-label="Twitter">Twitter Icon</a>
-            <a href="#" aria-label="Facebook">Facebook Icon</a>
-            <a href="#" aria-label="Instagram">Instagram Icon</a>
-            <a href="#" aria-label="Dribbble">Dribbble Icon</a>
-            <a href="#" aria-label="Behance">Behance Icon</a>
-        </footer>
-    </div>
+        <div style="text-align: center;color: #ebebeb;font-size: 14px;">
+            Copyright &copy; KBismark. All rights reserved.
+        </div>
+    </footer>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400..900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Hedvig+Letters+Serif:opsz@12..24&display=swap" rel="stylesheet">
 </body>
 </html>
